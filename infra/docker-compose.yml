@@ -1,0 +1,82 @@
+version: '2'
+services:
+#----------------- MQTT ----------------------------------
+  mosquitto:
+    image: eclipse-mosquitto:1.5.8
+    container_name: mosquitto
+    volumes:
+      - ./srv/mosquitto/:/etc/mosquitto/:ro
+    ports:
+      - "1883:1883"
+    networks:
+      - fullinfra
+#----------------- SAVE DATA -----------------------------
+  influxdb:
+    image: influxdb:1.7.10
+    container_name: influxdb
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
+    volumes:
+      # Data persistency
+     - ./srv/influxdb/data:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DATA_ENGINE=tsm1
+      - INFLUXDB_REPORTING_DISABLED=false
+      #- INFLUXDB_ADMIN_USER=admin
+      #- INFLUXDB_ADMIN_PASSWORD=admin
+      #- INFLUXDB_HTTP_AUTH_ENABLED=true
+      - INFLUXDB_DB=IoT
+      #- INFLUXDB_DB=IoT;CREATE DATABASE logs; # Create two DBs
+    networks:
+      - fullinfra
+# para ver las bases 
+# curl -G "http://localhost:8086/query?pretty=true" --data-urlencode "q=show databases"
+#---------------- SHOW DATA AND TENDENCE ---------------
+  grafana:
+    image: grafana/grafana:6.7.1
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    links:
+      - influxdb
+      - subscriber
+    volumes:
+      - ./grafana:/var/lib/grafana/plugins:rw # :ro
+      - ./grafana/provisioning/:/etc/grafana/provisioning/ # :ro
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_GRAFANA_PLUGIN_LIST="pierosavi-imageit-panel"
+    networks:
+      - fullinfra
+#---------------------- SUBSCRIBER ------------------------------
+  subscriber:
+    build:
+      context: subscriber/
+    image: subscriber
+    container_name: subscriber
+    links:
+      - mosquitto
+      - influxdb
+    restart: 'always'
+    networks:
+      - fullinfra
+#---------------------- API ------------------------------
+  api:
+    build:
+      context: API/
+    image: api
+    container_name: api
+    ports:
+      - "8080:8080"
+    links:
+      - influxdb
+    restart: 'always'
+    networks:
+      - fullinfra
+#-------------------- NETWORK ----------------------------
+networks:
+  fullinfra:
+    driver: bridge
