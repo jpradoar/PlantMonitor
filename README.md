@@ -111,8 +111,3 @@ docker-compose up -d
     Si sabes de jardinería, puedes generar tus  PRE-PlantBooks. (lo cual ayudará a tener niveles más acertados)
     Si sabes de diseño, puedes intentar mejorar las interfaces o la arquitectura en general.
     Cualquier skill sirve. Solo sientete libre de comunicarlo.
-
-
-
-<br><br>
-<span style="font-size:1em;">Power by: <a href="www.disruptivesolutions.com.ar" target="_blank">DisruptiveSolutions</a></span>
