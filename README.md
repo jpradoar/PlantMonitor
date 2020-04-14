@@ -1,9 +1,9 @@
 #   PlantMonitor :chart_with_downwards_trend: :seedling:
-Version 0.1.0
+Version 1.0.0
 
 ### Importante
 - Este proyecto está financiado 100% por mi mismo. (Por tal razón crece lentamente).
-- Esta es la versión v0.1.0.  Si bien es completamente funcional, algunos sistemas no tienen el mejor diseño ni el código más elegante. 
+- Esta es la versión v1.0.0.  Si bien es completamente funcional, algunos sistemas no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
 
 - <b>Si crees que es interesante para tu jardín o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
