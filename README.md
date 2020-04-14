@@ -30,7 +30,7 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
   - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
 
 
-### Imágenes:
+### Imágenes del sistema:
 
 <p align="center">Grafana Panel<br>
   <img src="img/grafana-panel.png"/><br>
@@ -61,6 +61,25 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 <p align="center">
   <img src="img/analog-expansor.png"/><br>
 </p>
+
+
+
+
+
+### Imagenes Planta
+
+<p align="center">Planta de tomate cherry<br>
+  <img src="img/plant00.jpg" width="50%" height="50%" /><br>
+</p>
+<p align="center">Mono "invernadero" (cañas de bambú y bolsa Polipropileno)<br>
+  <img src="img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
+</p>
+<p align="center">Final<br>
+  <img src="img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
+</p>
+<br>
+
+
 
 
 ### Cómo correr/ejecutar
@@ -94,3 +113,6 @@ docker-compose up -d
     Cualquier skill sirve. Solo sientete libre de comunicarlo.
 
 
+
+<br><br>
+<span style="font-size:1em;">Power by: <a href="www.disruptivesolutions.com.ar" target="_blank">DisruptiveSolutions</a></span>
