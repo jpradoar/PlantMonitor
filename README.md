@@ -44,24 +44,26 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 
 
+### Materiales (Pending...)
+
+<p align="center">
+  <img src="img/dht22.jpg"/><br>
+</p>
+
+<p align="center">
+  <img src="img/ldr.jpg"/><br>
+</p>
+
+<p align="center">
+  <img src="img/Soil.jpg"/><br>
+</p>
+
+<p align="center">
+  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"/><br>
+</p>
+
+
 ### Circuitos (Pending...)
-
-<p align="center">
-  <img src="img/dht22.png"/><br>
-</p>
-
-<p align="center">
-  <img src="img/ldr.png"/><br>
-</p>
-
-<p align="center">
-  <img src="img/Soil.png"/><br>
-</p>
-
-<p align="center">
-  <img src="img/analog-expansor.png"/><br>
-</p>
-
 
 
 
