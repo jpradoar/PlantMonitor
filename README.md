@@ -63,7 +63,10 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 </p>
 
 
-### Circuitos (Pending...)
+### Circuitos
+<p align="center">
+  <img src="img/PlantMonitor_circuit.png"/><br>
+</p>
 
 
 
