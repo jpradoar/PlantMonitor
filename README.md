@@ -2,7 +2,7 @@
 Version 1.0.0
 
 ### Importante
-- Este proyecto está financiado 100% por mi mismo. (Por tal razón crece lentamente).
+- Este proyecto está financiado 100% por mi mísmo. (Por tal razón crece lentamente).
 - Esta es la versión v1.0.0.  Si bien es completamente funcional, algunos sistemas no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
 
@@ -11,14 +11,13 @@ Version 1.0.0
 
 
 ### Info
-Este proyecto surge de la necesidad de monitorear el estado y ciclo de vida de una planta.
-En este caso, tomates cherry :tomato:. 
-La finalidad del mismo es monitorear el ciclo de vida, mientras
-los datos obtenidos de los sensores son almacenados en una base de datos, para luego generar lo que yo llamo un "plant book", el cual
-refleje los niveles necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento. Junto con esto
-están configurados los niveles máximos y mínimos de alertas, que en el caso de que 
-estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema.
-El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines multiples.
+Este proyecto surge de la necesidad de monitorear el estado y ciclo de vida de una planta, usando tecnologías de bajo costo con el concepto de IoT,
+En este caso, Internet en tomates cherry :tomato:. 
+
+Mientras los datos obtenidos de los sensores son almacenados en una base de datos, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "plant book", el cual refleje los niveles necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento. Junto con esto
+están configurados los niveles máximos y mínimos de alertas, que en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc)
+
+El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
 
 ### En el futuro:
@@ -30,49 +29,43 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
   - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
 
 
-### Imágenes del sistema:
-
-<p align="center">Grafana Panel<br>
-  <img src="img/grafana-panel.png"/><br>
-</p>
-<p align="center">Slack alert<br>
-  <img src="img/grafana-alert-slack.png"  width="50%" height="50%"  /><br>
-</p>
-<p align="center">Plant Web Module<br>
-  <img src="img/module-web.png"  width="50%" height="50%"  /><br>
+### Panel del sistema completo de la planta (Grafana)
+<p align="center">
+  <img src="img/grafana-panel.png"/>
 </p>
 
+<br>
 
+### Mensajes y alertas en Slack + Thresholds/Umbrales seteables
+<p align="center">
+  <img src="img/grafana-alert-slack.png"  width="50%" height="50%"  />
+</p>
+
+<br>
+### Interfaz web del modulo de la planta
+<p align="center">
+  <img src="img/module-web.png"  width="50%" height="50%"  />
+</p>
+
+<br><br>
 
 ### Materiales (Pending...)
-
 <p align="center">
-  <img src="img/dht22.jpg"/><br>
+  <img src="img/dht22.jpg"  width="30%" height="30%"/>   <img src="img/ldr.jpg"  width="30%" height="30%"/><br>
+  <img src="img/Soil.jpg" width="30%" height="30%"/>    <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/>
 </p>
 
-<p align="center">
-  <img src="img/ldr.jpg"/><br>
-</p>
-
-<p align="center">
-  <img src="img/Soil.jpg"/><br>
-</p>
-
-<p align="center">
-  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"/><br>
-</p>
-
+<br><br>
 
 ### Circuitos
 <p align="center">
-  <img src="img/PlantMonitor_circuit.png"/><br>
+  <img src="img/PlantMonitor_circuit.png"/>
 </p>
 
 
+<br><br>
 
-
-### Imagenes Planta
-
+### Imagenes Planta (Prueba de concepto final)
 <p align="center">Planta de tomate cherry<br>
   <img src="img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
@@ -82,10 +75,8 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 <p align="center">Final<br>
   <img src="img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
+
 <br>
-
-
-
 
 ### Cómo correr/ejecutar
 <pre>
@@ -94,7 +85,7 @@ cd infra/
 docker-compose up -d
 </pre>
 
-
+<br>
 
 ### FAQ
 
