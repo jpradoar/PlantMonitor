@@ -28,6 +28,7 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
   - Implementar el uso de paneles solares (100% autosustentable).   <b>[Pending...]</b>
   - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
 
+<br>
 
 ### Panel del sistema completo de la planta (Grafana)
 <p align="center">
@@ -42,12 +43,14 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 </p>
 
 <br>
+
 ### Interfaz web del modulo de la planta
 <p align="center">
   <img src="img/module-web.png"  width="50%" height="50%"  />
 </p>
 
-<br><br>
+
+<br><br><br>
 
 ### Materiales (Pending...)
 <p align="center">
@@ -55,17 +58,17 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
   <img src="img/Soil.jpg" width="30%" height="30%"/>    <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/>
 </p>
 
-<br><br>
+<br><br><br>
 
 ### Circuitos
 <p align="center">
-  <img src="img/PlantMonitor_circuit.png"/>
+  <img src="img/PlantMonitor_circuit.png"  width="50%" height="50%"/>
 </p>
 
 
-<br><br>
+<br><br><br>
 
-### Imagenes Planta (Prueba de concepto final)
+### Imagenes Planta y prueba de concepto final
 <p align="center">Planta de tomate cherry<br>
   <img src="img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
