@@ -1,5 +1,5 @@
 #   PlantMonitor :chart_with_downwards_trend: :seedling:
-Version 1.0.0
+Version v0.1-alpha
 
 ### Importante
 - Este proyecto está financiado 100% por mi mísmo. (Por tal razón crece lentamente).
