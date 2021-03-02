@@ -1,4 +1,4 @@
-#   PlantMonitor :chart_with_downwards_trend: :seedling:
+#   PlantMonitor "Real Plant Book" :chart_with_downwards_trend: :seedling:
 Version v0.1-alpha
 
 ### Importante
