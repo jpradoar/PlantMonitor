@@ -3,19 +3,19 @@ Version v0.1-alpha
 
 ### Importante
 - Este proyecto está financiado 100% por mi mísmo. (Por tal razón crece lentamente).
-- Esta es la versión v1.0.0.  Si bien es completamente funcional, algunos sistemas no tienen el mejor diseño ni el código más elegante. 
+- Esta es la versión v0.1-alpha.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
 
-- <b>Si crees que es interesante para tu jardín o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
-- Contacto: jpradoar (arroba) gm4il . c0m
+- <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
+- Contacto: jpradoar @ gmail . com
 
 
 ### Info
-Este proyecto surge de la necesidad de monitorear el estado y ciclo de vida de una planta, usando tecnologías de bajo costo con el concepto de IoT,
+Este proyecto surge de la necesidad de monitorear el estado y ciclo de vida de una planta, usando tecnologías de bajo costo bajo el concepto de IoT,
 En este caso, Internet en tomates cherry :tomato:. 
 
-Mientras los datos obtenidos de los sensores son almacenados en una base de datos, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "plant book", el cual refleje los niveles necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento. Junto con esto
-están configurados los niveles máximos y mínimos de alertas, que en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc)
+El sistema recolecta datos obtenidos de los sensores que son almacenados en una base de datos. Estos a su vez, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "Real Plant Book", el cual refleje los niveles reales y necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento de la planta o fruto. Junto con esto
+están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc)
 
 El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
@@ -23,10 +23,11 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 ### En el futuro:
   - Documentar con mayor detalle y traducir a ingles                <b>[On going]</b>
   - Generar un pequeño invernadero con control de ventilación.      <b>[On going]</b>
-  - Generar el sistema de riego automático.                         <b>[Pending...]</b>
-  - Generar un Plant Book mas completo.                             <b>[Pending...]</b>
   - Implementar el uso de paneles solares (100% autosustentable).   <b>[Pending...]</b>
+  - Generar el sistema de riego automático.                         <b>[Pending...]</b>
+  - Generar un Plant Book más completo.                             <b>[Pending...]</b>
   - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
+  - Implementar desarrollo a una escala mayor.                      <b>[Pending...]</b>
 
 <br>
 
@@ -37,7 +38,7 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 <br>
 
-### Mensajes y alertas en Slack + Thresholds/Umbrales seteables
+### Mensajes y alertas en Slack + Thresholds/Umbrales configurables
 <p align="center">
   <img src="img/grafana-alert-slack.png"  width="50%" height="50%"  />
 </p>
@@ -90,7 +91,11 @@ docker-compose up -d
 
 <br>
 
-### FAQ
+### Preguntas frecuentes: (FAQ)
+ - El proyecto es publico, ¿tiene algún costo?
+    El proyecto es Open Source, es decir que todo el codigo està documentado y publicado para que cualquiera lo pueda usar, modificar y mejorar.
+    100% reproducible por cualquier persona sin costo alguno. (solo deberías conseguir los materiales)
+    Y lo más importante es sin fines de lucro.
 
  - Que tanto va a crecer este proyecto?
     Mi idea es poder crecer hasta tener un sistema completo de monitoreo, 
