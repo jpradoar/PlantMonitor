@@ -92,25 +92,25 @@ docker-compose up -d
 <br>
 
 ### Preguntas frecuentes: (FAQ)
- - El proyecto es publico, ¿tiene algún costo?
+ - <b>El proyecto es publico, ¿tiene algún costo?</b><br>
     El proyecto es Open Source, es decir que todo el codigo està documentado y publicado para que cualquiera lo pueda usar, modificar y mejorar.
     100% reproducible por cualquier persona sin costo alguno. (solo deberías conseguir los materiales)
     Y lo más importante es sin fines de lucro.
 
- - Que tanto va a crecer este proyecto?
+ - <b>Que tanto va a crecer este proyecto?</b><br>
     Mi idea es poder crecer hasta tener un sistema completo de monitoreo, 
     análisisis, riego automatico y generar mis propios PlantBook a travez de la experiencia.
 
- - Tengo un pequeño jardínin, puedo implementarlo?
+ - <b>Tengo un pequeño jardínin, puedo implementarlo?</b><br>
     Si, puedes implementarlo sin problemas. (de hecho seria genial!)
 
- - Tengo un invernadero y quiero implementarlo. Puedo agregar mas sensores?
-    Si, puedes agregar tantos sensores como la cantidad de pines (o más si usas expansor analogico!).
+ - <b>Tengo una huerta y/o invernadero y quiero implementarlo. Puedo agregar mas sensores?</b><br>
+    Si, puedes agregar tantos sensores como la cantidad de pines (o más si usas expansor analogico!). O bien puedes agregar más sensores.
 
- - Tengo algunas dudas y preguntas acerca del proyecto. ¿Como puedo contactarte?
+ - <b>Tengo algunas dudas y preguntas acerca del proyecto. ¿Como puedo contactarte?</b><br>
     Puedes enviarme un mail y me pondré en contacto.  jpradoar (arroba) gm4il . c0m
 
- - Quiero ayudar. ¿Como puedo hacerlo?
+ - <b>Quiero ayudar. ¿Como puedo hacerlo?</b><br>
     Si sabes programar puedes revisar el codigo y mejorarlo. Así todos tendremos un mejor sistema.
     Si sabes de jardinería, puedes generar tus  PRE-PlantBooks. (lo cual ayudará a tener niveles más acertados)
     Si sabes de diseño, puedes intentar mejorar las interfaces o la arquitectura en general.
