@@ -84,7 +84,7 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 ### Cómo correr/ejecutar
 <pre>
 git clone https://github.com/jpradoar/PlantMonitor.git
-cd infra/ 
+cd PlantMonitor/infra/
 docker-compose up -d
 </pre>
 
