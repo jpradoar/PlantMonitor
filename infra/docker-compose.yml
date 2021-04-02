@@ -20,19 +20,26 @@ services:
       - "8090:8090"
     volumes:
       # Data persistency
-     - ./srv/influxdb/data:/var/lib/influxdb
+     - ./srv/influxdb/data:/var/lib/influxdb:rw
     environment:
       - INFLUXDB_DATA_ENGINE=tsm1
       - INFLUXDB_REPORTING_DISABLED=false
-      #- INFLUXDB_ADMIN_USER=admin
-      #- INFLUXDB_ADMIN_PASSWORD=admin
-      #- INFLUXDB_HTTP_AUTH_ENABLED=true
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+      - INFLUXDB_HTTP_AUTH_ENABLED=false
       - INFLUXDB_DB=IoT
       #- INFLUXDB_DB=IoT;CREATE DATABASE logs; # Create two DBs
     networks:
       - fullinfra
 # para ver las bases 
 # curl -G "http://localhost:8086/query?pretty=true" --data-urlencode "q=show databases"
+
+# para ver la info (la base (db=IoT)  debe ser la declarada en INFLUX_DB=IoT   
+# curl -sG "http://localhost:8086/query?db=IoT" --data-urlencode "q=show measurements"|jq -r        
+
+# para ver la data 
+# curl -sG "http://localhost:8086/query?db=IoT" --data-urlencode "q=select * from IoT"|jq -r        
+        
 #---------------- SHOW DATA AND TENDENCE ---------------
   grafana:
     image: grafana/grafana:6.7.1
@@ -41,7 +48,7 @@ services:
       - "3000:3000"
     links:
       - influxdb
-      - subscriber
+      #- subscriber
     volumes:
       - ./grafana:/var/lib/grafana/plugins:rw # :ro
       - ./grafana/provisioning/:/etc/grafana/provisioning/ # :ro
@@ -49,18 +56,6 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_GRAFANA_PLUGIN_LIST="pierosavi-imageit-panel"
-    networks:
-      - fullinfra
-#---------------------- SUBSCRIBER ------------------------------
-  subscriber:
-    build:
-      context: subscriber/
-    image: subscriber
-    container_name: subscriber
-    links:
-      - mosquitto
-      - influxdb
-    restart: 'always'
     networks:
       - fullinfra
 #---------------------- API ------------------------------
@@ -73,6 +68,20 @@ services:
       - "8080:8080"
     links:
       - influxdb
+    restart: 'always'
+    networks:
+      - fullinfra
+#---------------------- SUBSCRIBER ------------------------------
+  subscriber:
+    build:
+      context: subscriber/
+    image: subscriber
+    container_name: subscriber
+    links:
+      - mosquitto
+      - influxdb
+      - grafana
+      - api
     restart: 'always'
     networks:
       - fullinfra

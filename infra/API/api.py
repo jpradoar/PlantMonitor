@@ -8,8 +8,8 @@ app = Flask(__name__)
 # Vars
 host='influxdb'
 port=8086
-user='root'
-password='root'
+user='admin'
+password='admin'
 dbname='IoT'
 showhelp="Example:\ncurl -s -u admin:admin http://127.0.0.1:8080/api/{resource}"
 
