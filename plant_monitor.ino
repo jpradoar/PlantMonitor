@@ -1,5 +1,5 @@
 /*
-Plant Monitor v0.1
+Plant Monitor v1.0.0
 Jonathan Prado
 jpradoar (arroba) gm4il punto COM
 */
@@ -18,17 +18,17 @@ jpradoar (arroba) gm4il punto COM
 #define DHTTYPE DHT22         // DHT 22  (AM2302), AM2321
 
 // WIFI 
-const char* ssid      = "supermegaSSID";  // SSID
-const char* password  = "supermegapassword";      // Password
+const char* ssid      = "TeleCentro-2e3d";  // SSID
+const char* password  = "IDDQD_ax018";      // Password
 
 /*-------------------------------- USER CONFIGURED SECTION START -------------------------------- */
-const char* mqtt_server       = "192.168.0.2";  // Servidor donde esta el MQTT server
-const int mqtt_port           = 1883;           // Puerto del MQTT
+const char* mqtt_server       = "mosquitto"; // Servidor donde esta el MQTT server
+const int   mqtt_port         = 1883;           // Puerto del MQTT
 const char *mqtt_user         = "admin";        // USER
 const char *mqtt_pass         = "admin";        // PASS
-const char *mqtt_client_name  = "cherry";       // Nombre del cliente (Client connections cant have the same connection name)
+const char *mqtt_client_name  = "HomeWeatherSystem";       // Nombre del cliente (Client connections cant have the same connection name)
 const char *mqtt_topic        = "IoT";          // El nombre del topic donde voy a insertar la data
-const char *admin_topic       = "clients";      // El nombre del topico
+const char *admin_topic       = "admin";      // El nombre del topico
 
 // Initializes the espClient. You should change the espClient name if you have multiple ESPs running in your home automation system
 WiFiClient cherry;
@@ -48,8 +48,8 @@ ESP8266WebServer server(80);    // Levanto un webserver en el puerto 80
 
 uint8_t DHTPin    = 2;          // Defino el pin del DHT (ESP8266 D4)
 DHT dht(DHTPin, DHTTYPE);       // Inicializo el sensor DHT
-float Temperature;              // Defino el valor Temperatura como float (por que viene con numero con coma)
-float Humidity;                 // Defino el valor Humedad como float (por que viene con numero con coma)
+float Temperature;              // Defino el valor Temperatura como float (por que viene en numero con coma)
+float Humidity;                 // Defino el valor Humedad como float (por que viene en numero con coma)
 
 
 void setup() {                  // START SETUP
@@ -171,8 +171,7 @@ void loop() {                          // START LOOP
 
   // Aca me conecto al MQTT server remoto.
   client.connect(mqtt_client_name, mqtt_user, mqtt_pass, mqtt_topic, 0, 0, "closed");
-// Aca estoy intentando enviarle un JSON al MQTT server pero vengo fracasando desde hace rato (PENDING...)  
-//  client.publish(mqtt_topic,"[{\"fields\": {\"Temperature\": Temperature, \"Humidity\": 67, \"Soil\": 22 , \"name\": \"cherry\"}, \"measurement\": \"IoT\"}]");
+
 // Aca no tiene mucho sentido explicar. Publico los datos al MQTT server en formato String
   client.publish("Temperature", String(Temperature).c_str(), true);
   delay(100);

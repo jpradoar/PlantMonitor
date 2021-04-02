@@ -5,18 +5,18 @@ services:
     image: eclipse-mosquitto:1.5.8
     container_name: mosquitto
     volumes:
-      - ./srv/mosquitto/:/etc/mosquitto/:ro
+      - ./srv/mosquitto/:/etc/mosquitto/:rw
     ports:
       - "1883:1883"
     networks:
       - fullinfra
-#----------------- SAVE DATA -----------------------------
+#----------------- INFLUXDB -----------------------------
   influxdb:
     image: influxdb:1.7.10
     container_name: influxdb
     ports:
-      - "8083"
-      - "8086"
+      - "8083:8083"
+      - "8086:8086"
       - "8090"
     volumes:
      - ./srv/influxdb/data:/var/lib/influxdb:rw
@@ -52,7 +52,7 @@ services:
       - ./grafana/provisioning/:/etc/grafana/provisioning/:ro
     environment:
       - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=Z4rleng4.Sup3rS3rv3r-1.!
       - GF_GRAFANA_PLUGIN_LIST="pierosavi-imageit-panel"
     networks:
       - fullinfra
@@ -83,6 +83,47 @@ services:
     restart: 'always'
     networks:
       - fullinfra
+#---------------------- MYSQL ------------------------------
+  mysql:
+    image: mariadb:10.1.19
+    container_name: mysql
+    ports:
+      - "3306"
+    restart: 'always'
+    volumes: 
+      - ./webserver/code/dump.sql:/docker-entrypoint-initdb.d/dump.sql    
+    environment:
+      MYSQL_DATABASE: 'test'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'admin'
+    networks:
+      - fullinfra   
+#---------------------- PHP ------------------------------
+  php:
+    build:
+      context: php/
+    container_name: php  
+    volumes:
+      - ./webserver/code/:/usr/share/nginx/html:ro
+    restart: 'always'
+    networks:
+      - fullinfra        
+#---------------------- HTTP ------------------------------
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    links:
+      - mysql
+      - php
+    volumes:
+      - ./webserver/code/:/usr/share/nginx/html:ro
+      - ./webserver/conf/site.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: 'always'
+    networks:
+      - fullinfra         
 #-------------------- NETWORK ----------------------------
 networks:
   fullinfra:

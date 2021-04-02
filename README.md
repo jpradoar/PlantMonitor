@@ -1,9 +1,9 @@
 #   PlantMonitor "Real Plant Book" :chart_with_downwards_trend: :seedling:
-Version v0.1-alpha
+Version v1.0.0
 
 ### Importante
 - Este proyecto está financiado 100% por mi mísmo. (Por tal razón crece lentamente).
-- Esta es la versión v0.1-alpha.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
+- Esta es la versión v1.0.0.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
 
 - <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
@@ -22,12 +22,13 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 ### En el futuro:
   - Documentar con mayor detalle y traducir a ingles                <b>[On going]</b>
-  - Generar un pequeño invernadero con control de ventilación.      <b>[On going]</b>
-  - Implementar el uso de paneles solares (100% autosustentable).   <b>[Pending...]</b>
+  - Generar un pequeño invernadero con control de ventilación.      <b>[Pending]</b>
+  - Implementar el uso de paneles solares (100% autosustentable).   <b>[Investigando...]</b>
   - Generar el sistema de riego automático.                         <b>[Pending...]</b>
   - Generar un Plant Book más completo.                             <b>[Pending...]</b>
   - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
   - Implementar desarrollo a una escala mayor.                      <b>[Pending...]</b>
+  - Implementar sistema de usuarios para api.                       <b>[On going...]</b>
 
 <br>
 

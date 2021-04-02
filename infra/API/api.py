@@ -44,7 +44,7 @@ def hello():
 
 
 @app.route('/api/sensor', methods=['GET'])
-#@requires_auth
+@requires_auth
 def get_temp():
     fields = str(request.args.get('fields'))
     Qlimit = int(request.args.get('limit'))
@@ -52,11 +52,10 @@ def get_temp():
         return "Sorry: limit must be less than 20"
     else:
         dbClient = InfluxDBClient(host, port, user, password, dbname)
-        DBquery = dbClient.query('SELECT '+fields+' FROM "IoT" ORDER BY time DESC LIMIT '+str(Qlimit))
+        DBquery = dbClient.query('SELECT '+fields+' FROM '+fields+' ORDER BY time DESC LIMIT '+str(Qlimit))
         Qoutput = DBquery.raw
         print(Qoutput)
         return Qoutput
-
 
 
 
