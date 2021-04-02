@@ -18,8 +18,8 @@ jpradoar (arroba) gm4il punto COM
 #define DHTTYPE DHT22         // DHT 22  (AM2302), AM2321
 
 // WIFI 
-const char* ssid      = "TeleCentro-2e3d";  // SSID
-const char* password  = "IDDQD_ax018";      // Password
+const char* ssid      = "MySSID";  // SSID
+const char* password  = "MySSID-PASS";      // Password
 
 /*-------------------------------- USER CONFIGURED SECTION START -------------------------------- */
 const char* mqtt_server       = "mosquitto"; // Servidor donde esta el MQTT server
