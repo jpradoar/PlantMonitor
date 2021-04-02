@@ -15,11 +15,10 @@ services:
     image: influxdb:1.7.10
     container_name: influxdb
     ports:
-      - "8083:8083"
-      - "8086:8086"
-      - "8090:8090"
+      - "8083"
+      - "8086"
+      - "8090"
     volumes:
-      # Data persistency
      - ./srv/influxdb/data:/var/lib/influxdb:rw
     environment:
       - INFLUXDB_DATA_ENGINE=tsm1
@@ -48,10 +47,9 @@ services:
       - "3000:3000"
     links:
       - influxdb
-      #- subscriber
     volumes:
       - ./grafana:/var/lib/grafana/plugins:rw # :ro
-      - ./grafana/provisioning/:/etc/grafana/provisioning/ # :ro
+      - ./grafana/provisioning/:/etc/grafana/provisioning/:ro
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
