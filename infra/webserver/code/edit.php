@@ -8,28 +8,28 @@ if(isset($_POST['update']))
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
 	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-	$data1 = mysqli_real_escape_string($mysqli, $_POST['data1']);
-	$data2 = mysqli_real_escape_string($mysqli, $_POST['data2']);	
+	$user = mysqli_real_escape_string($mysqli, $_POST['user']);
+	$pass = mysqli_real_escape_string($mysqli, $_POST['pass']);	
 	
 	// checking empty fields
-	if(empty($name) || empty($data1) || empty($data2)) {	
+	if(empty($name) || empty($user) || empty($pass)) {	
 			
 		if(empty($name)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
 		}
 		
-		if(empty($data1)) {
-			echo "<font color='red'>data1 field is empty.</font><br/>";
+		if(empty($user)) {
+			echo "<font color='red'>User field is empty.</font><br/>";
 		}
 		
-		if(empty($data2)) {
-			echo "<font color='red'>data2 field is empty.</font><br/>";
+		if(empty($pass)) {
+			echo "<font color='red'>Pass field is empty.</font><br/>";
 		}		
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE users SET name='$name',data1='$data1',data2='$data2' WHERE id=$id");
+		$result = mysqli_query($mysqli, "UPDATE users SET name='$name',user='$user',pass='$pass' WHERE id=$id");
 		
-		//redirectig to the display pdata1. In our case, it is index.php
+		//redirectig to the display puser. In our case, it is index.php
 		header("Location: index.php");
 	}
 }
@@ -44,8 +44,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
 while($res = mysqli_fetch_array($result))
 {
 	$name = $res['name'];
-	$data1 = $res['data1'];
-	$data2 = $res['data2'];
+	$user = $res['user'];
+	$pass = $res['pass'];
 }
 ?>
 <html>
@@ -54,7 +54,7 @@ while($res = mysqli_fetch_array($result))
 </head>
 
 <body>
-	<a href="index.php">Home</a>
+	 <a href="index.php"><button>Home</button></a>
 	<br/><br/>
 	
 	<form name="form1" method="post" action="edit.php">
@@ -64,12 +64,12 @@ while($res = mysqli_fetch_array($result))
 				<td><input type="text" name="name" value="<?php echo $name;?>"></td>
 			</tr>
 			<tr> 
-				<td>data1</td>
-				<td><input type="text" name="data1" value="<?php echo $data1;?>"></td>
+				<td>User</td>
+				<td><input type="text" name="user" value="<?php echo $user;?>"></td>
 			</tr>
 			<tr> 
-				<td>data2</td>
-				<td><input type="text" name="data2" value="<?php echo $data2;?>"></td>
+				<td>Pass</td>
+				<td><input type="password" name="pass" value="<?php echo $pass;?>"></td>
 			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>

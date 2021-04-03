@@ -15,8 +15,8 @@ services:
     image: influxdb:1.7.10
     container_name: influxdb
     ports:
-      - "8083:8083"
-      - "8086:8086"
+      - "8083"
+      - "8086"
       - "8090"
     volumes:
      - ./srv/influxdb/data:/var/lib/influxdb:rw
@@ -121,6 +121,7 @@ services:
     volumes:
       - ./webserver/code/:/usr/share/nginx/html:ro
       - ./webserver/conf/site.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./webserver/conf/htpasswd:/.htpasswd:ro      
     restart: 'always'
     networks:
       - fullinfra         
