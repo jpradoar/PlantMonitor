@@ -1,4 +1,4 @@
-#   PlantMonitor "Real Plant Book" :chart_with_downwards_trend: :seedling:
+#   Weather and PlantMonitor "Real Plant Book" :chart_with_downwards_trend: :seedling:
 Version v1.0.0
 
 ### Importante
@@ -11,24 +11,24 @@ Version v1.0.0
 
 
 ### Info
-Este proyecto surge de la necesidad de monitorear el estado y ciclo de vida de una planta, usando tecnologías de bajo costo bajo el concepto de IoT,
+Este proyecto surge de la necesidad de monitorear el estado del clima y el ciclo de vida de una planta, usando tecnologías Open Hardware, bajo el concepto de IoT.
 En este caso, Internet en tomates cherry :tomato:. 
 
-El sistema recolecta datos obtenidos de los sensores que son almacenados en una base de datos. Estos a su vez, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "Real Plant Book", el cual refleje los niveles reales y necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento de la planta o fruto. Junto con esto
-están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc)
+A través de los sensores, el sistema recolecta datos que son almacenados en una base de datos. Estos a su vez, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "Real Plant Book", el cual refleje los niveles reales y necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento de la planta o fruto. 
+Junto con esto están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc).  Al cabo de un año de uso, se podrá tener el histórico completo del estado del clima más el estado de la plata (comportamiento) según clima. 
 
 El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
 
 ### En el futuro:
-  - Documentar con mayor detalle y traducir a ingles                <b>[On going]</b>
-  - Generar un pequeño invernadero con control de ventilación.      <b>[Pending]</b>
-  - Implementar el uso de paneles solares (100% autosustentable).   <b>[Investigando...]</b>
-  - Generar el sistema de riego automático.                         <b>[Pending...]</b>
-  - Generar un Plant Book más completo.                             <b>[Pending...]</b>
-  - Implementar el uso en Hidroponia.                               <b>[Pending...]</b>
-  - Implementar desarrollo a una escala mayor.                      <b>[Pending...]</b>
-  - Implementar sistema de usuarios para api.                       <b>[On going...]</b>
+  - Documentar con mayor detalle y traducir a ingles                <b>[En marcha]</b>
+  - Generar un pequeño invernadero con control de ventilación.      <b>[Pendiente...]</b>
+  - Implementar el uso de paneles solares (100% autosustentable).   <b>[En marcha]</b>
+  - Generar el sistema de riego automático.                         <b>[Investigando...]</b>
+  - Generar un Plant Book más completo.                             <b>[Pendiente...]</b>
+  - Implementar el uso en Hidroponia.                               <b>[Pendiente...]</b>
+  - Implementar desarrollo a una escala mayor.                      <b>[Pendiente...]</b>
+  - Implementar sistema de usuarios para api.                       <b>[En marcha]</b>
 
 <br>
 
@@ -56,8 +56,10 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 ### Materiales (Pending...)
 <p align="center">
-  <img src="img/dht22.jpg"  width="30%" height="30%"/>   <img src="img/ldr.jpg"  width="30%" height="30%"/><br>
-  <img src="img/Soil.jpg" width="30%" height="30%"/>    <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/>
+  <img src="img/dht22.jpg"  width="30%" height="30%"/>   
+  <img src="img/ldr.jpg"  width="30%" height="30%"/><br>
+  <img src="img/Soil.jpg" width="30%" height="30%"/>    
+  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/>
 </p>
 
 <br><br><br>
@@ -96,7 +98,7 @@ docker-compose up -d
  - <b>El proyecto es publico, ¿tiene algún costo?</b><br>
     El proyecto es Open Source, es decir que todo el codigo està documentado y publicado para que cualquiera lo pueda usar, modificar y mejorar.
     100% reproducible por cualquier persona sin costo alguno. (solo deberías conseguir los materiales)
-    Y lo más importante es sin fines de lucro.
+    Y lo más importante, es sin fines de lucro.
 
  - <b>Que tanto va a crecer este proyecto?</b><br>
     Mi idea es poder crecer hasta tener un sistema completo de monitoreo, 
@@ -107,6 +109,9 @@ docker-compose up -d
 
  - <b>Tengo una huerta y/o invernadero y quiero implementarlo. Puedo agregar mas sensores?</b><br>
     Si, puedes agregar tantos sensores como la cantidad de pines (o más si usas expansor analogico!). O bien puedes agregar más sensores.
+ 
+ - <b>No tengo una huerta ni invernadero pero quiero usarlo como una Estación meteorológica . Puedo agregar mas sensores?</b><br>
+    Claro, puedes usarlo solo como Estación meteorológica en tu casa/balcon/etc y hasta agregar tus propios sensores. Seria genial!
 
  - <b>Tengo algunas dudas y preguntas acerca del proyecto. ¿Como puedo contactarte?</b><br>
     Puedes enviarme un mail y me pondré en contacto.  jpradoar (arroba) gm4il . c0m
