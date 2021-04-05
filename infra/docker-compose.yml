@@ -45,14 +45,16 @@ services:
     container_name: grafana
     ports:
       - "3000:3000"
-    links:
+    #links:
+    #  - influxdb
+    depends_on:
       - influxdb
     volumes:
       - ./grafana:/var/lib/grafana/plugins:rw # :ro
       - ./grafana/provisioning/:/etc/grafana/provisioning/:ro
     environment:
       - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=Z4rleng4.Sup3rS3rv3r-1.!
+      - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_GRAFANA_PLUGIN_LIST="pierosavi-imageit-panel"
     networks:
       - fullinfra
@@ -64,7 +66,7 @@ services:
     container_name: api
     ports:
       - "8080:8080"
-    links:
+    depends_on:
       - influxdb
     restart: 'always'
     networks:
@@ -75,11 +77,12 @@ services:
       context: subscriber/
     image: subscriber
     container_name: subscriber
-    links:
+    #links:
+    #  - mosquitto
+    #  - influxdb
+    depends_on:
       - mosquitto
       - influxdb
-      - grafana
-      - api
     restart: 'always'
     networks:
       - fullinfra
@@ -106,6 +109,8 @@ services:
     container_name: php  
     volumes:
       - ./webserver/code/:/usr/share/nginx/html:ro
+    depends_on:
+      - mysql      
     restart: 'always'
     networks:
       - fullinfra        
@@ -115,7 +120,7 @@ services:
     container_name: nginx
     ports:
       - "80:80"
-    links:
+    depends_on:
       - mysql
       - php
     volumes:

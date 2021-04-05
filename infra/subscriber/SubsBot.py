@@ -46,8 +46,5 @@ def DoMagic():
        print("Port is not responding, wait a few seconds...")
        time.sleep(15)
 
-
-time.sleep(10) # wait for docker compose up 
 while True: 
     DoMagic()
-    
