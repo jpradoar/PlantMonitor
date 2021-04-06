@@ -1,9 +1,9 @@
 #   Weather and PlantMonitor "Real Plant Book" :chart_with_downwards_trend: :seedling:
-Version v1.0.0
+Version v0.1.0-beta 
 
 ### Importante
 - Este proyecto está financiado 100% por mi mísmo. (Por tal razón crece lentamente).
-- Esta es la versión v1.0.0.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
+- Esta es la versión v0.1.0-beta.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
 
 - <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
@@ -59,7 +59,8 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
   <img src="img/dht22.jpg"  width="30%" height="30%"/>   
   <img src="img/ldr.jpg"  width="30%" height="30%"/><br>
   <img src="img/Soil.jpg" width="30%" height="30%"/>    
-  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/>
+  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/><br>
+ <img src="img/panel-solar.png"  width="30%" height="30%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
 </p>
 
 <br><br><br>

@@ -4,7 +4,6 @@ import time
 import socket
 
 
-
 # constantes 
 broker_address      = "mosquitto"    # Broker address
 database_address    = "influxdb"    # DB address
