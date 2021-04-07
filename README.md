@@ -73,6 +73,14 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 <br><br><br>
 
+### Arquitectura
+<p align="center">
+  <img src="img/arquitectura.png"/>
+</p>
+
+
+<br><br><br>
+
 ### Imagenes Planta y prueba de concepto final
 <p align="center">Planta de tomate cherry<br>
   <img src="img/plant00.jpg" width="50%" height="50%" /><br>
