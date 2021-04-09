@@ -52,7 +52,30 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_GRAFANA_PLUGIN_LIST="pierosavi-imageit-panel"
     networks:
+      - fullinfra   
+#---------------------- SUBSCRIBER ------------------------------
+  subscriber:
+    build:
+      context: subscriber/
+    image: subscriber
+    container_name: subscriber
+    depends_on:
+      - mosquitto
+      - influxdb
+    restart: 'always'
+    networks:
       - fullinfra
+#---------------------- SUBSCRIBER ------------------------------
+  smn:
+    build:
+      context: smn/
+    image: smn
+    container_name: smn
+    depends_on:
+      - mosquitto
+    restart: 'always'
+    networks:
+      - fullinfra      
 #---------------------- API ------------------------------
   api:
     build:
@@ -62,18 +85,6 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - influxdb
-    restart: 'always'
-    networks:
-      - fullinfra
-#---------------------- SUBSCRIBER ------------------------------
-  subscriber:
-    build:
-      context: subscriber/
-    image: subscriber
-    container_name: subscriber
-    depends_on:
-      - mosquitto
       - influxdb
     restart: 'always'
     networks:
@@ -121,7 +132,7 @@ services:
       - ./webserver/conf/htpasswd:/.htpasswd:ro      
     restart: 'always'
     networks:
-      - fullinfra         
+      - fullinfra               
 #-------------------- NETWORK ----------------------------
 networks:
   fullinfra:

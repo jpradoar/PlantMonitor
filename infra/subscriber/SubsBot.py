@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import paho.mqtt.client as mqtt
 from influxdb import InfluxDBClient # FOR write data on influxDB
 import time
@@ -18,12 +19,13 @@ intent              = 0
 
 
 def on_message(client, userdata, message):
-    print("received message: " ,str(message.payload.decode("utf-8")))
+    #print("received message: " ,str(message.payload.decode("utf-8")))
     value       = str(message.payload.decode("utf-8"))   
     xvalue      = float(value)
     print(message.topic , str(value))
     dbClient    = InfluxDBClient(database_address, influxport, user, password, db_name)
-    loginEvents = [{"measurement":message.topic, "fields":{ message.topic : xvalue } }]
+    loginEvents = [{"measurement":"measurement", "fields":{ message.topic : xvalue } }]
+    print(loginEvents)
     writedata   = dbClient.write_points(loginEvents)
 
 def on_subscribe():
@@ -41,7 +43,7 @@ def DoMagic():
     location        = (broker_address, port)
     result_of_check = a_socket.connect_ex(location)
     if result_of_check == 0:
-        print("Connected")
+        print(".")
         on_subscribe()
     else:
        print("Port is not responding, wait a few seconds...")

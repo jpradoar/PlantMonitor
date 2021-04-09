@@ -36,12 +36,315 @@
       "type": "text"
     },
     {
+      "content": "\n# Buenos Aires\n[Ciudad Autónoma de Buenos Aires](https://es.wikipedia.org/wiki/Buenos_Aires)\n\n\n\n",
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 2
+      },
+      "id": 25,
+      "mode": "markdown",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": "IoT",
+      "description": "Posición donde se toman las mediciones según el SMN ",
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 4,
+        "y": 2
+      },
+      "id": 20,
+      "links": [
+        {
+          "title": "Latitud - Wikipedia",
+          "url": "https://es.wikipedia.org/wiki/Latitud"
+        }
+      ],
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 8,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-purple",
+                  "value": null
+                }
+              ]
+            },
+            "title": "",
+            "unit": "short"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.7.1",
+      "targets": [
+        {
+          "alias": "LAT",
+          "groupBy": [],
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_lat"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Latitud - SMN",
+      "type": "stat"
+    },
+    {
+      "datasource": "IoT",
+      "description": "Posición donde se toman las mediciones según el SMN ",
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 9,
+        "y": 2
+      },
+      "id": 21,
+      "links": [
+        {
+          "title": "Longitud - Wikipedia",
+          "url": "https://es.wikipedia.org/wiki/Longitud"
+        }
+      ],
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 8,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-purple",
+                  "value": null
+                }
+              ]
+            },
+            "title": "",
+            "unit": "short"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.7.1",
+      "targets": [
+        {
+          "alias": "LON",
+          "groupBy": [],
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_lon"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Longitud - SMN",
+      "type": "stat"
+    },
+    {
+      "datasource": "IoT",
+      "description": "Presión atmosférica registrada por el SMN",
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 14,
+        "y": 2
+      },
+      "id": 22,
+      "links": [
+        {
+          "title": "Presión atmosférica - Wikipedia",
+          "url": "https://es.wikipedia.org/wiki/Presi%C3%B3n_atmosf%C3%A9rica"
+        }
+      ],
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 1,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-purple",
+                  "value": null
+                }
+              ]
+            },
+            "title": "",
+            "unit": "pressurehpa"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.7.1",
+      "targets": [
+        {
+          "alias": "hPa",
+          "groupBy": [],
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_pressure"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Presión Atmosférica (hPa) - SMN",
+      "type": "stat"
+    },
+    {
+      "datasource": "IoT",
+      "description": "Visibilidad registrada por el SMN",
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 19,
+        "y": 2
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 1,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-purple",
+                  "value": null
+                }
+              ]
+            },
+            "title": "",
+            "unit": "lengthkm"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.7.1",
+      "targets": [
+        {
+          "alias": "",
+          "groupBy": [],
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_visibility"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Visibilidad - SMN",
+      "type": "stat"
+    },
+    {
       "datasource": "IoT",
       "gridPos": {
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 2
+        "y": 6
       },
       "id": 14,
       "options": {
@@ -84,9 +387,10 @@
       "pluginVersion": "6.7.1",
       "targets": [
         {
+          "alias": "DHT22",
           "groupBy": [],
           "limit": "",
-          "measurement": "Temperature",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -106,16 +410,16 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Temp",
+      "title": "Temp - DHT22",
       "type": "stat"
     },
     {
       "datasource": "IoT",
       "gridPos": {
         "h": 4,
-        "w": 5,
+        "w": 6,
         "x": 6,
-        "y": 2
+        "y": 6
       },
       "id": 13,
       "options": {
@@ -155,9 +459,10 @@
       "pluginVersion": "6.7.1",
       "targets": [
         {
+          "alias": "DHT22",
           "groupBy": [],
           "limit": "",
-          "measurement": "Humidity",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -177,7 +482,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Hum",
+      "title": "Hum - DHT22",
       "type": "stat"
     },
     {
@@ -185,8 +490,8 @@
       "gridPos": {
         "h": 4,
         "w": 6,
-        "x": 11,
-        "y": 2
+        "x": 12,
+        "y": 6
       },
       "id": 18,
       "options": {
@@ -227,9 +532,10 @@
       "pluginVersion": "6.7.1",
       "targets": [
         {
+          "alias": "LDR",
           "groupBy": [],
           "limit": "",
-          "measurement": "Ldr",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -249,16 +555,16 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Light",
+      "title": "Light - LDR",
       "type": "stat"
     },
     {
       "datasource": "IoT",
       "gridPos": {
         "h": 4,
-        "w": 7,
-        "x": 17,
-        "y": 2
+        "w": 6,
+        "x": 18,
+        "y": 6
       },
       "id": 11,
       "options": {
@@ -305,7 +611,7 @@
         {
           "groupBy": [],
           "limit": "",
-          "measurement": "Soil",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -377,7 +683,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 6
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 8,
@@ -390,7 +696,7 @@
         "max": false,
         "min": false,
         "rightSide": false,
-        "show": false,
+        "show": true,
         "total": false,
         "values": true
       },
@@ -410,8 +716,9 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "DHT22",
           "groupBy": [],
-          "measurement": "Temperature",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -427,6 +734,26 @@
             ]
           ],
           "tags": []
+        },
+        {
+          "alias": "SMN",
+          "groupBy": [],
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_temp"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
         }
       ],
       "thresholds": [
@@ -435,14 +762,16 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 11
+          "value": 11,
+          "yaxis": "left"
         },
         {
           "colorMode": "critical",
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 34
+          "value": 34,
+          "yaxis": "left"
         }
       ],
       "timeFrom": null,
@@ -469,7 +798,7 @@
           "label": "Temperature",
           "logBase": 1,
           "max": "40",
-          "min": "-5",
+          "min": "-10",
           "show": true
         },
         {
@@ -498,9 +827,9 @@
       "fillGradient": 10,
       "gridPos": {
         "h": 8,
-        "w": 5,
+        "w": 6,
         "x": 6,
-        "y": 6
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 7,
@@ -513,7 +842,7 @@
         "max": false,
         "min": false,
         "rightSide": false,
-        "show": false,
+        "show": true,
         "total": false,
         "values": true
       },
@@ -533,19 +862,42 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "DHT22",
           "groupBy": [],
-          "measurement": "Humidity",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Humidity\" FROM \"IoT\" WHERE $timeFilter",
           "rawQuery": false,
           "refId": "A",
-          "resultFormat": "table",
+          "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
                   "Humidity"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "SMN",
+          "groupBy": [],
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"Humidity\" FROM \"IoT\" WHERE $timeFilter",
+          "rawQuery": false,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_hum"
                 ],
                 "type": "field"
               }
@@ -644,8 +996,8 @@
       "gridPos": {
         "h": 8,
         "w": 6,
-        "x": 11,
-        "y": 6
+        "x": 12,
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 17,
@@ -678,15 +1030,16 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "LDR",
           "groupBy": [],
           "limit": "",
-          "measurement": "Ldr",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Ldr\" FROM \"IoT\" WHERE $timeFilter",
           "rawQuery": false,
           "refId": "A",
-          "resultFormat": "table",
+          "resultFormat": "time_series",
           "select": [
             [
               {
@@ -799,9 +1152,9 @@
       "fillGradient": 7,
       "gridPos": {
         "h": 8,
-        "w": 7,
-        "x": 17,
-        "y": 6
+        "w": 6,
+        "x": 18,
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 6,
@@ -834,14 +1187,15 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "Soil",
           "groupBy": [],
-          "measurement": "Soil",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
           "rawQuery": false,
           "refId": "A",
-          "resultFormat": "table",
+          "resultFormat": "time_series",
           "select": [
             [
               {
@@ -921,7 +1275,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 14
+        "y": 18
       },
       "id": 2,
       "pageSize": null,
@@ -958,7 +1312,7 @@
         {
           "groupBy": [],
           "limit": 10,
-          "measurement": "Temperature",
+          "measurement": "measurement",
           "orderByTime": "DESC",
           "policy": "default",
           "refId": "A",
@@ -988,9 +1342,9 @@
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
-        "w": 5,
+        "w": 6,
         "x": 6,
-        "y": 14
+        "y": 18
       },
       "id": 3,
       "pageSize": null,
@@ -1027,7 +1381,7 @@
         {
           "groupBy": [],
           "limit": "10",
-          "measurement": "Humidity",
+          "measurement": "measurement",
           "orderByTime": "DESC",
           "policy": "default",
           "refId": "A",
@@ -1058,8 +1412,8 @@
       "gridPos": {
         "h": 5,
         "w": 6,
-        "x": 11,
-        "y": 14
+        "x": 12,
+        "y": 18
       },
       "id": 19,
       "pageSize": null,
@@ -1096,7 +1450,7 @@
         {
           "groupBy": [],
           "limit": 10,
-          "measurement": "Ldr",
+          "measurement": "measurement",
           "orderByTime": "DESC",
           "policy": "default",
           "refId": "A",
@@ -1126,9 +1480,9 @@
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
-        "w": 7,
-        "x": 17,
-        "y": 14
+        "w": 6,
+        "x": 18,
+        "y": 18
       },
       "id": 12,
       "pageSize": null,
@@ -1165,7 +1519,7 @@
         {
           "groupBy": [],
           "limit": 10,
-          "measurement": "Soil",
+          "measurement": "measurement",
           "orderByTime": "DESC",
           "policy": "default",
           "refId": "A",
@@ -1202,7 +1556,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 23
       },
       "hiddenSeries": false,
       "id": 9,
@@ -1236,7 +1590,7 @@
       "targets": [
         {
           "groupBy": [],
-          "measurement": "Humidity",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
@@ -1257,7 +1611,7 @@
         },
         {
           "groupBy": [],
-          "measurement": "Temperature",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
@@ -1278,7 +1632,7 @@
         },
         {
           "groupBy": [],
-          "measurement": "Ldr",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
@@ -1299,7 +1653,7 @@
         },
         {
           "groupBy": [],
-          "measurement": "Soil",
+          "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
@@ -1371,7 +1725,7 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {

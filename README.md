@@ -19,6 +19,9 @@ Junto con esto están configurados unos niveles máximos y mínimos de alertas, 
 
 El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
+Adicionalmente, el sistema consume información del Servicio Meteorológico Nacional (SMN) y la guarda en la base de datos, la cual es mostrada en el mismo panel para tener visibilidad real y precisa. (Punto de comparación), ya que el sistema puede mostrar distintas mediciones dependiendo del lugar donde esté (ej: si esta en un balcón, o si esta en el interior de una casa)
+
+
 
 ### En el futuro:
   - Documentar con mayor detalle y traducir a ingles                <b>[En marcha]</b>
