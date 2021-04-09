@@ -2,10 +2,8 @@ version: '2'
 services:
 #----------------- MQTT ----------------------------------
   mosquitto:
-    image: eclipse-mosquitto:1.5.8
+    image: eclipse-mosquitto:1.6.14
     container_name: mosquitto
-    volumes:
-      - ./srv/mosquitto/:/etc/mosquitto/:rw
     ports:
       - "1883:1883"
     networks:

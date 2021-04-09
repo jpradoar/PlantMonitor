@@ -16,7 +16,7 @@ Ticker ticker;                  // https://blog.creations.de/?p=149
 
 
 /*-------------------------------- MQTT SERVER CONFIGURATION -------------------------------- */
-const char* mqtt_server       = "192.168.0.22";           // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
+const char* mqtt_server       = "1.2.3.4";           // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
 const int   mqtt_port         =  1883;                    // Puerto del MQTT
 const char *mqtt_user         = "admin";                  // USER
 const char *mqtt_pass         = "admin";                  // PASS
@@ -48,8 +48,8 @@ float Temperature;                // Defino el valor Temperatura como float (por
 float Humidity;                   // Defino el valor Humedad como float     (por que viene en numero con coma)
 
 /* -------------------------------- WIFI CONFIG --------------------------------- */
-const char* ssid       = "mi-wifi-ssid"; 	// your wifi name
-const char* password   = "mi-wifi-pass";     	// your wifi pass
+const char* ssid       = "mi-wifi-ssid";      // your wifi name
+const char* password   = "mi-wifi-pass";      // your wifi pass
 
 /* -------------------------------- DEEP-SLEEP CONFIG --------------------------------- */
 #define durationSleep  60                   // 1 second = 1,000,000 microseconds
@@ -138,14 +138,14 @@ void setup() {
   client.connect(mqtt_client_name, mqtt_user, mqtt_pass, mqtt_topic, 0, 0, "closed");  // Aca me conecto al MQTT server remoto.
   
   // Publico los datos al MQTT server en formato String (espero 500ms para no matar el mqtt server)
-  client.publish("Temperature", String(Temperature).c_str(), true);
-  delay(500);
-  client.publish("Humidity", String(Humidity).c_str(), true);
-  delay(500);
-  client.publish("Soil", String(soilmoisturepercent).c_str(), true);
-  delay(500);
-  client.publish("Ldr", String(adc1).c_str(), true);
-  client.disconnect();
+  client.publish("Temperature", String(Temperature).c_str(), false);    // uso false para que el mensaje no persista en el MQTT server una vez consumido
+  delay(500);                                                           // espero medio seg para no sobrecargar el MQTT server
+  client.publish("Humidity", String(Humidity).c_str(), false);          // uso false para que el mensaje no persista en el MQTT server una vez consumido
+  delay(500);                                                           // espero medio seg para no sobrecargar el MQTT server
+  client.publish("Soil", String(soilmoisturepercent).c_str(), false);   // uso false para que el mensaje no persista en el MQTT server una vez consumido
+  delay(500);                                                           // espero medio seg para no sobrecargar el MQTT server
+  client.publish("Ldr", String(adc1).c_str(), false);                   // uso false para que el mensaje no persista en el MQTT server una vez consumido
+  client.disconnect();                                                  // me desconecto
 
 
 
@@ -162,11 +162,11 @@ void setup() {
   Serial.print("SSID: ");
   Serial.println(ssid);  
   Serial.print("FromIP: ");
-  Serial.println(WiFi.localIP()); // muestro la IP que tiene mi arduino (IP de origen)
+  Serial.println(WiFi.localIP());     // muestro la IP que tiene mi arduino (IP de origen)
   Serial.print("ESP-MAC-Address: ");
   Serial.println(WiFi.macAddress());  
   Serial.print("ToMQTT: ");
-  Serial.println(mqtt_server);    // muestro la IP del MQTT server (IP de destino)
+  Serial.println(mqtt_server);        // muestro la IP del MQTT server (IP de destino)
 
 
 
@@ -179,7 +179,7 @@ void setup() {
 void MQTTcallback(char* mqtt_topic, byte* payload, unsigned int length) {     // Genero una funsion de callback
   String message;                                                             // Seteo como string el mensaje
   for (int i = 0; i < length; i++) {                                          // Si el mensaje es igual a cero le sumo uno
-    message = message + (char)payload[i];                                     //Convierto *bytes a Strings
+    message = message + (char)payload[i];                                     // Convierto *bytes a Strings
   }
 } 
 

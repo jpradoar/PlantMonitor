@@ -1,0 +1,113 @@
+{
+  "_id": "5bbbc16659879ccdbfbffeb3",
+  "dist": 6.18,
+  "lid": 4864,
+  "fid": 4864,
+  "int_number": 87585,
+  "name": "Capital Federal",
+  "province": "Capital Federal",
+  "lat": "-34.62170792",
+  "lon": "-58.42575836",
+  "zoom": "1",
+  "updated": 1617879600,
+  "weather": {
+    "humidity": 70,
+    "pressure": 1010.1,
+    "st": null,
+    "visibility": 10,
+    "wind_speed": 13,
+    "id": 2,
+    "description": "Parcialmente nublado",
+    "temp": 23.2,
+    "wing_deg": "Norte",
+    "tempDesc": "23.2ºC"
+  },
+  "forecast": {
+    "_id": "598b871ff9a90f9a3d470746",
+    "timestamp": "1617883203644",
+    "date_time": "2019-05-08 17:30",
+    "location_id": 4864,
+    "forecast": {
+      "0": {
+        "date": "2019-05-08",
+        "temp_min": null,
+        "temp_max": null,
+        "temp_min_sub": null,
+        "temp_noc": 17,
+        "radiation": null,
+        "morning": {
+          "weather_id": 2,
+          "description": "Cielo algo a parcialmente nublado. Vientos  leves del sector este."
+        },
+        "afternoon": {
+          "weather_id": 2,
+          "description": "Cielo algo a parcialmente nublado. Vientos  leves del sector este."
+        }
+      },
+      "1": {
+        "date": "2019-05-09",
+        "temp_min": 15,
+        "temp_max": 18,
+        "temp_min_sub": null,
+        "temp_noc": null,
+        "radiation": "Muy baja",
+        "morning": {
+          "weather_id": 18,
+          "description": "Cielo parcialmente nublado a nublado. Probabilidad neblinas especialmente en la zona suburbana. Tiempo desmejorando,  con probabilidad de lluvias  y algunas tormentas. Vientos moderados del sector este."
+        },
+        "afternoon": {
+          "weather_id": 4,
+          "description": "Cielo nublado. Probabilidad de lluvias y tormentas. Vientos   leves del sector este."
+        }
+      },
+      "2": {
+        "date": "2019-05-10",
+        "temp_min": 14,
+        "temp_max": 20,
+        "temp_min_sub": null,
+        "temp_noc": null,
+        "radiation": null,
+        "morning": {
+          "weather_id": 4,
+          "description": "Nubosidad variable. Probabilidad de lluvias y algunas tormentas.  Mejorando temporariamente. Vientos leves del sector oeste,  cambiando a moderados del sudoeste,  con ráfagas.  "
+        },
+        "afternoon": {
+          "weather_id": 11,
+          "description": "Nubosidad variable. Probabilidad chaparrones. Vientos moderados a leves  del sudoeste."
+        }
+      },
+      "3": {
+        "date": "2019-05-11",
+        "temp_min": 9,
+        "temp_max": 18,
+        "temp_min_sub": null,
+        "temp_noc": null,
+        "radiation": null,
+        "morning": {
+          "weather_id": 1,
+          "description": "Cielo parcial a algo nublado. Vientos leves del sudoeste. "
+        },
+        "afternoon": {
+          "weather_id": 1,
+          "description": "Cielo algo nublado. Vientos leves del sector oeste. "
+        }
+      },
+      "4": {
+        "date": "2019-05-12",
+        "temp_min": 11,
+        "temp_max": 19,
+        "temp_min_sub": null,
+        "temp_noc": null,
+        "radiation": null,
+        "morning": {
+          "weather_id": 1,
+          "description": "Cielo algo nublado. Vientos leves del sector oeste. "
+        },
+        "afternoon": {
+          "weather_id": 1,
+          "description": "Cielo algo nublado. Vientos leves del sector oeste. "
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ intent              = 0
 
 
 def on_message(client, userdata, message):
-    #print("received message: " ,str(message.payload.decode("utf-8")))
+    print("received message: " ,str(message.payload.decode("utf-8")))
     value       = str(message.payload.decode("utf-8"))   
     xvalue      = float(value)
     print(message.topic , str(value))
@@ -28,19 +28,21 @@ def on_message(client, userdata, message):
 
 def on_subscribe():
     client      = mqtt.Client(client_name)
-    client.connect(broker_address, port ) 
-    client.loop_start()
-    client.subscribe(topic)
+    client.connect(broker_address, port )   #connect
+    client.loop_start()                     #start loop to process received messages
+    client.subscribe(topic)                 #subscribe to topic
     client.on_message = on_message 
     time.sleep(5)
     client.loop_stop()
+
 
 def DoMagic():
     a_socket        = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     location        = (broker_address, port)
     result_of_check = a_socket.connect_ex(location)
     if result_of_check == 0:
-       on_subscribe()
+        print("Connected")
+        on_subscribe()
     else:
        print("Port is not responding, wait a few seconds...")
        time.sleep(15)

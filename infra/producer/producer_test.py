@@ -10,7 +10,7 @@ dataid = randint(1, 100)
 number_rand = randint(1, 4)
 
 #broker_address = "ec2-52-13-47-239.us-west-2.compute.amazonaws.com"
-broker_address = "192.168.1.59"
+broker_address = "192.168.0.22"
 broker_portnum = 1883
 cli_id = "00001"
 subscr = "#"
