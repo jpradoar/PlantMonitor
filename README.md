@@ -84,8 +84,8 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <br><br><br>
 
-### Imagenes Planta y prueba de concepto final
-<p align="center">Planta de tomate cherry<br>
+### Prueba de concepto
+<p align="center">
   <img src="img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
 <p align="center">Mono "invernadero" (cañas de bambú y bolsa Polipropileno)<br>
