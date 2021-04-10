@@ -70,7 +70,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Circuitos
 <p align="center">
-  <img src="img/PlantMonitor_circuit.png"  width="50%" height="50%"/>
+  <img src="img/Fritzing-graph.png"  width="50%" height="50%"/>
 </p>
 
 

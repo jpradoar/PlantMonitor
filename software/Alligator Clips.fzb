@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806" icon="Mine.png">
+    <title>Alligator Clips</title>
+    <instances>
+        <instance moduleIdRef="clipSideBlack_97a7e802756eddb9d0bf0f0baf7b0d82_2" modelIndex="5906" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideBlack_97a7e802756eddb9d0bf0f0baf7b0d82_2.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipSideBlue_b551ea02d280ec50d14f4040057cf321_3" modelIndex="5962" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideBlue_b551ea02d280ec50d14f4040057cf321_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipSideGreen_58b6abdcf886828d018fd989d1e56ca8_3" modelIndex="5996" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideGreen_58b6abdcf886828d018fd989d1e56ca8_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipSideRed_b4a350b02bdbb5ca160a9387485aadf6_3" modelIndex="6014" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideRed_b4a350b02bdbb5ca160a9387485aadf6_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipSideWhite_1227017d26503ebea8e986189b38073e_2" modelIndex="6027" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideWhite_1227017d26503ebea8e986189b38073e_2.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipSideYellow_e56b305bad0828e78007dec624d963d6_3" modelIndex="6045" path="/home/jprado/Documents/Fritzing/parts/contrib/clipSideYellow_e56b305bad0828e78007dec624d963d6_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopBlack_ea2c591b6c611591a4efdd5a8e31d5c2_3" modelIndex="6098" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopBlack_ea2c591b6c611591a4efdd5a8e31d5c2_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopBlue_3d608ce023382c62999173e75787ecab_3" modelIndex="6116" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopBlue_3d608ce023382c62999173e75787ecab_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopGreen_5877238d785d8e13a7e6cc677a177a67_3" modelIndex="6134" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopGreen_5877238d785d8e13a7e6cc677a177a67_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopRed_cb0bd3eff4c4bb71653b224e19ae3c85_3" modelIndex="6152" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopRed_cb0bd3eff4c4bb71653b224e19ae3c85_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopWhite_f1b58ae999f4dcda9a341336024c3d4f_3" modelIndex="6170" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopWhite_f1b58ae999f4dcda9a341336024c3d4f_3.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="clipTopYellow_81fd6db421263c2cbfa0d499ded2149e_3" modelIndex="6188" path="/home/jprado/Documents/Fritzing/parts/contrib/clipTopYellow_81fd6db421263c2cbfa0d499ded2149e_3.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>

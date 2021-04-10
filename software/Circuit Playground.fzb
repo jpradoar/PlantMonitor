@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806" icon="Custom1.png">
+    <title>Circuit Playground</title>
+    <instances>
+        <instance moduleIdRef="44d66a6de21fb27a070e52870e1f24a2" modelIndex="95297" path="/home/jprado/Documents/Fritzing/parts/contrib/Cappy_the_Capacitor__fb284cb0bad872205f3de38cffef7889.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="d130c15f7f2c36a5a21e749e298a7892" modelIndex="95298" path="/home/jprado/Documents/Fritzing/parts/contrib/Billie_the_Blue_LED__372d58e4a557aa67238331d6cd73bb64.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="6d5d0dbfc7d0ed36c54a2fbffab8b043" modelIndex="95299" path="/home/jprado/Documents/Fritzing/parts/contrib/Ruby_the_Red_LED__e99552a8923e26f1ad7794e656df0461.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="fbb7ef1de17712c82987a834b66d14b7" modelIndex="95300" path="/home/jprado/Documents/Fritzing/parts/contrib/Gus_the_Green_LED__035698c525547c17f39971e8ba322bf1.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>

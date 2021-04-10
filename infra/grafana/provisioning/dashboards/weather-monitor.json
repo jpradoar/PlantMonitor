@@ -19,8 +19,11 @@
   "links": [],
   "panels": [
     {
-      "content": "<div class=\"dashboard-header\">\n  <span>Weather Monitor v0.1</span> \n</div>\n",
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 2,
         "w": 24,
@@ -28,16 +31,22 @@
         "y": 0
       },
       "id": 16,
-      "mode": "html",
+      "options": {
+        "content": "<div class=\"dashboard-header\">\n  <span>Weather Monitor v0.1</span> \n</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "7.5.3",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
     {
-      "content": "\n# Buenos Aires\n[Ciudad Autónoma de Buenos Aires](https://es.wikipedia.org/wiki/Buenos_Aires)\n\n\n\n",
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 4,
@@ -45,16 +54,37 @@
         "y": 2
       },
       "id": 25,
-      "mode": "markdown",
+      "options": {
+        "content": "\n# Buenos Aires\n[Ciudad Autónoma de Buenos Aires](https://es.wikipedia.org/wiki/Buenos_Aires)\n\n\n\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "7.5.3",
       "timeFrom": null,
       "timeShift": null,
-      "title": "",
       "transparent": true,
       "type": "text"
     },
     {
       "datasource": "IoT",
       "description": "Posición donde se toman las mediciones según el SMN ",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 8,
+          "displayName": "",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 5,
@@ -70,33 +100,20 @@
       ],
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 8,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-purple",
-                  "value": null
-                }
-              ]
-            },
-            "title": "",
-            "unit": "short"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "LAT",
@@ -128,6 +145,24 @@
     {
       "datasource": "IoT",
       "description": "Posición donde se toman las mediciones según el SMN ",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 8,
+          "displayName": "",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 5,
@@ -143,33 +178,20 @@
       ],
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 8,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-purple",
-                  "value": null
-                }
-              ]
-            },
-            "title": "",
-            "unit": "short"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "LON",
@@ -201,6 +223,24 @@
     {
       "datasource": "IoT",
       "description": "Presión atmosférica registrada por el SMN",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 1,
+          "displayName": "",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "pressurehpa"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 5,
@@ -216,33 +256,20 @@
       ],
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 1,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-purple",
-                  "value": null
-                }
-              ]
-            },
-            "title": "",
-            "unit": "pressurehpa"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "hPa",
@@ -274,6 +301,24 @@
     {
       "datasource": "IoT",
       "description": "Visibilidad registrada por el SMN",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 1,
+          "displayName": "",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "lengthkm"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 5,
@@ -283,33 +328,20 @@
       "id": 23,
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 1,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-purple",
-                  "value": null
-                }
-              ]
-            },
-            "title": "",
-            "unit": "lengthkm"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "",
@@ -340,6 +372,33 @@
     },
     {
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "displayName": "",
+          "mappings": [],
+          "max": 100,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-yellow",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 10
+              },
+              {
+                "color": "red",
+                "value": 33
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 6,
@@ -349,42 +408,20 @@
       "id": 14,
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 2,
-            "mappings": [],
-            "max": 100,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "semi-dark-yellow",
-                  "value": null
-                },
-                {
-                  "color": "dark-green",
-                  "value": 10
-                },
-                {
-                  "color": "red",
-                  "value": 33
-                }
-              ]
-            },
-            "title": "",
-            "unit": "celsius"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "DHT22",
@@ -415,6 +452,30 @@
     },
     {
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 1,
+          "displayName": "",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "humidity"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
         "w": 6,
@@ -424,39 +485,20 @@
       "id": 13,
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 1,
-            "mappings": [],
-            "max": 100,
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 90
-                }
-              ]
-            },
-            "title": "",
-            "unit": "humidity"
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "DHT22",
@@ -487,49 +529,141 @@
     },
     {
       "datasource": "IoT",
+      "description": "El lux (símbolo: lx) es la unidad derivada del Sistema Internacional de Unidades para la iluminancia o nivel de iluminación. Equivale a un lumen /m². Se usa en la fotometría como medida de la iluminancia, tomando en cuenta las diferentes longitudes de onda según la función de luminosidad, un modelo estándar de la sensibilidad del ojo humano a la luz. ",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "displayName": "",
+          "mappings": [],
+          "max": 17000,
+          "min": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "light-blue",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 10000
+              },
+              {
+                "color": "dark-orange",
+                "value": 18000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
-        "w": 6,
+        "w": 4,
         "x": 12,
+        "y": 6
+      },
+      "id": 26,
+      "links": [
+        {
+          "title": "Lux - Wikipedia",
+          "url": "https://es.wikipedia.org/wiki/Lux"
+        }
+      ],
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.3",
+      "targets": [
+        {
+          "alias": "Lumen",
+          "groupBy": [],
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Lux"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Light - Lumen",
+      "type": "stat"
+    },
+    {
+      "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "displayName": "",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "light-blue",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 10000
+              },
+              {
+                "color": "dark-orange",
+                "value": 18000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 16,
         "y": 6
       },
       "id": 18,
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 0,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "light-blue",
-                  "value": null
-                },
-                {
-                  "color": "dark-green",
-                  "value": 10000
-                },
-                {
-                  "color": "dark-orange",
-                  "value": 18000
-                }
-              ]
-            },
-            "title": ""
-          },
-          "overrides": [],
+          "fields": "",
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "alias": "LDR",
@@ -560,53 +694,58 @@
     },
     {
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "displayName": "",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 25
+              },
+              {
+                "color": "dark-yellow",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 4,
-        "w": 6,
-        "x": 18,
+        "w": 5,
+        "x": 19,
         "y": 6
       },
       "id": 11,
       "options": {
         "colorMode": "value",
-        "fieldOptions": {
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": {
           "calcs": [
             "last"
           ],
-          "defaults": {
-            "decimals": 0,
-            "mappings": [],
-            "max": 100,
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-red",
-                  "value": null
-                },
-                {
-                  "color": "dark-green",
-                  "value": 25
-                },
-                {
-                  "color": "dark-yellow",
-                  "value": 90
-                }
-              ]
-            },
-            "title": "",
-            "unit": "percent"
-          },
+          "fields": "",
           "limit": 1,
-          "overrides": [],
           "values": false
         },
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "horizontal"
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "groupBy": [],
@@ -677,6 +816,12 @@
       "dashes": false,
       "datasource": "IoT",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 10,
       "gridPos": {
@@ -704,9 +849,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -763,7 +909,7 @@
           "line": true,
           "op": "lt",
           "value": 11,
-          "yaxis": "left"
+          "visible": true
         },
         {
           "colorMode": "critical",
@@ -771,7 +917,7 @@
           "line": true,
           "op": "gt",
           "value": 34,
-          "yaxis": "left"
+          "visible": true
         }
       ],
       "timeFrom": null,
@@ -823,6 +969,12 @@
       "dashes": false,
       "datasource": "IoT",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 10,
       "gridPos": {
@@ -850,9 +1002,10 @@
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -991,11 +1144,17 @@
       "dashes": false,
       "datasource": "IoT",
       "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 7,
       "gridPos": {
         "h": 8,
-        "w": 6,
+        "w": 7,
         "x": 12,
         "y": 10
       },
@@ -1004,23 +1163,24 @@
       "legend": {
         "alignAsTable": false,
         "avg": false,
-        "current": false,
+        "current": true,
         "hideEmpty": false,
         "hideZero": false,
         "max": false,
         "min": false,
         "rightSide": false,
-        "show": false,
+        "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "connected",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1051,6 +1211,30 @@
             ]
           ],
           "tags": []
+        },
+        {
+          "alias": "LUX",
+          "groupBy": [],
+          "hide": false,
+          "limit": "",
+          "measurement": "measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"Ldr\" FROM \"IoT\" WHERE $timeFilter",
+          "rawQuery": false,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Lux"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
         }
       ],
       "thresholds": [
@@ -1059,7 +1243,8 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 14105
+          "value": 14105,
+          "visible": true
         }
       ],
       "timeFrom": null,
@@ -1081,16 +1266,18 @@
       },
       "yaxes": [
         {
-          "decimals": 0,
+          "$$hashKey": "object:1487",
+          "decimals": null,
           "format": "none",
           "label": "Light intensity",
           "logBase": 1,
-          "max": "20000",
+          "max": null,
           "min": "0",
           "show": true
         },
         {
-          "decimals": 0,
+          "$$hashKey": "object:1488",
+          "decimals": null,
           "format": "percent",
           "label": "",
           "logBase": 1,
@@ -1148,12 +1335,18 @@
       "dashes": false,
       "datasource": "IoT",
       "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 7,
       "gridPos": {
         "h": 8,
-        "w": 6,
-        "x": 18,
+        "w": 5,
+        "x": 19,
         "y": 10
       },
       "hiddenSeries": false,
@@ -1175,9 +1368,10 @@
       "linewidth": 1,
       "nullPointMode": "connected",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1215,14 +1409,16 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 35
+          "value": 35,
+          "visible": true
         },
         {
           "colorMode": "critical",
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 90
+          "value": 90,
+          "visible": true
         }
       ],
       "timeFrom": null,
@@ -1270,6 +1466,10 @@
     {
       "columns": [],
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
@@ -1286,32 +1486,18 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:2115",
           "alias": "Time",
           "align": "auto",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "dateFormat": "MM/DD/YY h:mm:ss a",
           "pattern": "Time",
           "type": "date"
-        },
-        {
-          "alias": "",
-          "align": "right",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "decimals": 2,
-          "pattern": "/.*/",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
         }
       ],
       "targets": [
         {
           "groupBy": [],
-          "limit": 10,
+          "limit": "10",
           "measurement": "measurement",
           "orderByTime": "DESC",
           "policy": "default",
@@ -1328,17 +1514,42 @@
             ]
           ],
           "tags": []
+        },
+        {
+          "groupBy": [],
+          "hide": false,
+          "limit": "10",
+          "measurement": "measurement",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "smn_temp"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
         }
       ],
       "timeFrom": null,
       "timeShift": null,
       "title": "Últimos registros:  Temp",
-      "transform": "table",
-      "type": "table"
+      "transform": "timeseries_to_rows",
+      "type": "table-old"
     },
     {
       "columns": [],
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
@@ -1355,13 +1566,15 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:2356",
           "alias": "Time",
           "align": "auto",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "dateFormat": "MM/DD/YY h:mm:ss a",
           "pattern": "Time",
           "type": "date"
         },
         {
+          "$$hashKey": "object:2357",
           "alias": "",
           "align": "right",
           "colorMode": null,
@@ -1402,16 +1615,20 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Últimos registros: Hum",
-      "transform": "table",
-      "type": "table"
+      "transform": "timeseries_to_rows",
+      "type": "table-old"
     },
     {
       "columns": [],
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
-        "w": 6,
+        "w": 7,
         "x": 12,
         "y": 18
       },
@@ -1424,13 +1641,15 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:360",
           "alias": "Time",
           "align": "auto",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "dateFormat": "MM/DD/YY h:mm:ss a",
           "pattern": "Time",
           "type": "date"
         },
         {
+          "$$hashKey": "object:361",
           "alias": "",
           "align": "right",
           "colorMode": null,
@@ -1466,22 +1685,47 @@
             ]
           ],
           "tags": []
+        },
+        {
+          "groupBy": [],
+          "hide": false,
+          "limit": 10,
+          "measurement": "measurement",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "Lux"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
         }
       ],
       "timeFrom": null,
       "timeShift": null,
       "title": "Últimos registros: Light",
-      "transform": "table",
-      "type": "table"
+      "transform": "timeseries_to_rows",
+      "type": "table-old"
     },
     {
       "columns": [],
       "datasource": "IoT",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 18,
+        "w": 5,
+        "x": 19,
         "y": 18
       },
       "id": 12,
@@ -1493,13 +1737,15 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:2630",
           "alias": "Time",
           "align": "auto",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "dateFormat": "MM/DD/YY h:mm:ss a",
           "pattern": "Time",
           "type": "date"
         },
         {
+          "$$hashKey": "object:2631",
           "alias": "",
           "align": "right",
           "colorMode": null,
@@ -1540,8 +1786,8 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Últimos registros: Soil",
-      "transform": "table",
-      "type": "table"
+      "transform": "timeseries_to_rows",
+      "type": "table-old"
     },
     {
       "aliasColors": {},
@@ -1550,6 +1796,12 @@
       "dashes": false,
       "datasource": "IoT",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 7,
       "gridPos": {
@@ -1577,9 +1829,10 @@
       "linewidth": 1,
       "nullPointMode": "connected",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.5.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1653,18 +1906,19 @@
         },
         {
           "groupBy": [],
+          "hide": false,
           "measurement": "measurement",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"Soil\" FROM \"IoT\" ",
           "rawQuery": false,
-          "refId": "D",
+          "refId": "E",
           "resultFormat": "table",
           "select": [
             [
               {
                 "params": [
-                  "Soil"
+                  "Lux"
                 ],
                 "type": "field"
               }
@@ -1693,6 +1947,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:606",
           "decimals": 2,
           "format": "short",
           "label": "",
@@ -1702,6 +1957,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:607",
           "decimals": 2,
           "format": "short",
           "label": "",
@@ -1718,14 +1974,14 @@
     }
   ],
   "refresh": "1m",
-  "schemaVersion": 22,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -1745,8 +2001,5 @@
   "timezone": "",
   "title": "Weather Monitor",
   "uid": "ytb6nrrWk",
-  "variables": {
-    "list": []
-  },
   "version": 1
 }
