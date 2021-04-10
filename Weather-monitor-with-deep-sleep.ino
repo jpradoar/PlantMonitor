@@ -6,6 +6,8 @@
 #include <Adafruit_ADS1015.h>   // Libreria para el modulo de ampliación de pines analogicos.
 #include <Ticker.h>             // https://blog.creations.de/?p=149
 Ticker ticker;                  // https://blog.creations.de/?p=149
+#include <Adafruit_Sensor.h>    // Libreria para manejar el sensor TSL2561 (requiere I2C - Wire.h)
+#include <Adafruit_TSL2561_U.h> // Libreria para manejar el sensor TSL2561 (requiere I2C - Wire.h)
 
 
 /*-------------------------------- DHTT option to use -------------------------------- */
@@ -48,19 +50,66 @@ float Temperature;                // Defino el valor Temperatura como float (por
 float Humidity;                   // Defino el valor Humedad como float     (por que viene en numero con coma)
 
 /* -------------------------------- WIFI CONFIG --------------------------------- */
-const char* ssid       = "mi-wifi-ssid";      // your wifi name
-const char* password   = "mi-wifi-pass";      // your wifi pass
+const char* ssid       = "mi-wifi-ssid";       // your wifi name
+const char* password   = "mi-wifi-pass";       // your wifi pass
 
 /* -------------------------------- DEEP-SLEEP CONFIG --------------------------------- */
 #define durationSleep  60                   // 1 second = 1,000,000 microseconds
 #define NB_TRYWIFI     10                   // number of try to connect WiFi
-
 
 void tick()
 {
   int state = digitalRead(BUILTIN_LED);     // get the current state of GPIO1 pin
   digitalWrite(BUILTIN_LED, !state);        // set pin to the opposite state
 }
+
+
+
+
+/*-------------------------------- TSL2561 config-------------------------------- */
+Adafruit_TSL2561_Unified tsl = Adafruit_TSL2561_Unified(TSL2561_ADDR_FLOAT, 12345);
+
+
+void displaySensorDetails(void)
+{
+  sensor_t sensor;
+  tsl.getSensor(&sensor);
+  Serial.println("------------------------------------");
+  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
+  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
+  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
+  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" lux");
+  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" lux");
+  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" lux");  
+  Serial.println("------------------------------------");
+  Serial.println("");
+  delay(500);
+}
+
+
+
+void configureSensor(void)
+{
+  /* You can also manually set the gain or enable auto-gain support */
+  // tsl.setGain(TSL2561_GAIN_1X);      /* No gain ... use in bright light to avoid sensor saturation */
+  // tsl.setGain(TSL2561_GAIN_16X);     /* 16x gain ... use in low light to boost sensitivity */
+  tsl.enableAutoRange(true);            /* Auto-gain ... switches automatically between 1x and 16x */
+  
+  /* Changing the integration time gives you better sensor resolution (402ms = 16-bit data) */
+  //tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_13MS);      /* fast but low resolution */
+   tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_101MS);  /* medium resolution and speed   */
+  // tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_402MS);  /* 16-bit data but slowest conversions */
+
+  /* Update these values depending on what you've set above! */  
+  Serial.println("------------------------------------");
+  Serial.print  ("Gain:         "); Serial.println("Auto");
+  Serial.print  ("Timing:       "); Serial.println("13 ms");
+  Serial.println("------------------------------------");
+}
+
+
+
+
 
 /* -------------------------------- GENERAL SETUP --------------------------------- */
 void setup() {
@@ -89,11 +138,14 @@ void setup() {
   Serial.println("----------------");   // un separador :)
 
 
+
 /* -------------------------------- DHT22 SETUP --------------------------------- */
   pinMode(DHTPin, INPUT);                       // Defino el pin del DHT en modo input para leer los datos que genera el mismo.
   dht.begin();                                  // Inicializo el DHT
   Temperature = dht.readTemperature();          // Leo el sensor y lo guardo en una variable llamada Temperature
   Humidity    = dht.readHumidity();             // Leo el sensor y lo guardo en una variable llamada Humedad
+
+
 
 
 /* ----- ADS (expansor analogico) & SOIL/LDR Sensors CONFIG --------------------------------- */
@@ -117,6 +169,47 @@ void setup() {
       //Serial.print(soilmoisturepercent);
      // Serial.println("%");
     }
+
+
+
+
+
+/*-------------------------------- TSL2561 -------------------------------- */
+  /* Initialise the sensor */
+  //use tsl.begin() to default to Wire, 
+  //tsl.begin(&Wire2) directs api to use Wire2, etc.
+  if(!tsl.begin())
+  {
+    /* There was a problem detecting the TSL2561 ... check your connections */
+    Serial.print("Ooops, no TSL2561 detected ... Check your wiring or I2C ADDR!");
+    while(1);
+  }
+  
+  /* Display some basic information on this sensor */
+  displaySensorDetails();
+  /* Setup the sensor gain and integration time */
+  configureSensor();
+  /* We're ready to go! */
+  Serial.println("");
+
+
+  /* Get a new sensor event */ 
+  sensors_event_t event;
+  tsl.getEvent(&event);
+ 
+  /* Display the results (light is measured in lux) */
+  if (event.light)
+  {
+    Serial.print("Lux: "); Serial.println(event.light); 
+  }
+  else
+  {
+    /* If event.light = 0 lux the sensor is probably saturated
+       and no reliable data could be generated! */
+    Serial.println("Sensor overload");
+  }
+  delay(250);
+
 
     
 /* -------------------------------- MQTT CONFIG --------------------------------- */
@@ -145,28 +238,22 @@ void setup() {
   client.publish("Soil", String(soilmoisturepercent).c_str(), false);   // uso false para que el mensaje no persista en el MQTT server una vez consumido
   delay(500);                                                           // espero medio seg para no sobrecargar el MQTT server
   client.publish("Ldr", String(adc1).c_str(), false);                   // uso false para que el mensaje no persista en el MQTT server una vez consumido
+  delay(500);
+  client.publish("Lux", String(event.light).c_str(), false);
   client.disconnect();                                                  // me desconecto
 
 
-
-
   // Imprimo todos los datos para visualizarlos en el serial monitor del arduino
-  Serial.print("Temp: ");
-  Serial.println(Temperature);
-  Serial.print("Hum: ");
-  Serial.println(Humidity);
-  Serial.print("Soil: ");
-  Serial.println(soilmoisturepercent);
-  Serial.print("Ldr: ");
-  Serial.println(adc1);
-  Serial.print("SSID: ");
-  Serial.println(ssid);  
-  Serial.print("FromIP: ");
-  Serial.println(WiFi.localIP());     // muestro la IP que tiene mi arduino (IP de origen)
-  Serial.print("ESP-MAC-Address: ");
-  Serial.println(WiFi.macAddress());  
-  Serial.print("ToMQTT: ");
-  Serial.println(mqtt_server);        // muestro la IP del MQTT server (IP de destino)
+  Serial.print("Temp: "); Serial.println(Temperature);
+  Serial.print("Hum: ");  Serial.println(Humidity);
+  Serial.print("Soil: "); Serial.println(soilmoisturepercent);
+  Serial.print("Ldr: ");  Serial.println(adc1);
+  Serial.print("Lux: ");  Serial.println(event.light);
+  Serial.print("SSID: "); Serial.println(ssid);
+  Serial.print("FromIP: "); Serial.println(WiFi.localIP());     // muestro la IP que tiene mi arduino (IP de origen)
+  Serial.print("ESP-MAC-Address: ");  Serial.println(WiFi.macAddress());
+  Serial.print("ToMQTT: "); Serial.println(mqtt_server);        // muestro la IP del MQTT server (IP de destino)
+  
 
 
 
