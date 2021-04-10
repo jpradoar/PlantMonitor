@@ -36,9 +36,9 @@ services:
 # para ver la data 
 # curl -sG "http://localhost:8086/query?db=IoT" --data-urlencode "q=select * from IoT"|jq -r        
         
-#---------------- SHOW DATA AND TENDENCE ---------------
+#---------------- GRAFANA ---------------
   grafana:
-    image: grafana/grafana:6.7.1
+    image: grafana/grafana:7.5.3 #6.7.1
     container_name: grafana
     ports:
       - "3000:3000"
@@ -65,7 +65,7 @@ services:
     restart: 'always'
     networks:
       - fullinfra
-#---------------------- SUBSCRIBER ------------------------------
+#---------------------- SMN ------------------------------
   smn:
     build:
       context: smn/

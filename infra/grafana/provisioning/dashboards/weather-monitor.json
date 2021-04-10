@@ -1332,7 +1332,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Temp",
+      "title": "Últimos registros:  Temp",
       "transform": "table",
       "type": "table"
     },
@@ -1401,7 +1401,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Hum",
+      "title": "Últimos registros: Hum",
       "transform": "table",
       "type": "table"
     },
@@ -1470,7 +1470,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Light",
+      "title": "Últimos registros: Light",
       "transform": "table",
       "type": "table"
     },
@@ -1539,7 +1539,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Soil",
+      "title": "Últimos registros: Soil",
       "transform": "table",
       "type": "table"
     },
@@ -1725,7 +1725,7 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
