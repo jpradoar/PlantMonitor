@@ -18,7 +18,7 @@ Ticker ticker;                  // https://blog.creations.de/?p=149
 
 
 /*-------------------------------- MQTT SERVER CONFIGURATION -------------------------------- */
-const char* mqtt_server       = "1.2.3.4";           // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
+const char* mqtt_server       = "1.2.3.4";                // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
 const int   mqtt_port         =  1883;                    // Puerto del MQTT
 const char *mqtt_user         = "admin";                  // USER
 const char *mqtt_pass         = "admin";                  // PASS
@@ -50,8 +50,8 @@ float Temperature;                // Defino el valor Temperatura como float (por
 float Humidity;                   // Defino el valor Humedad como float     (por que viene en numero con coma)
 
 /* -------------------------------- WIFI CONFIG --------------------------------- */
-const char* ssid       = "mi-wifi-ssid";       // your wifi name
-const char* password   = "mi-wifi-pass";       // your wifi pass
+const char* ssid       = "mi-wifi-ssid";           // your wifi name
+const char* password   = "mi-wifi-pass";           // your wifi pass
 
 /* -------------------------------- DEEP-SLEEP CONFIG --------------------------------- */
 #define durationSleep  60                   // 1 second = 1,000,000 microseconds
@@ -96,15 +96,17 @@ void configureSensor(void)
   tsl.enableAutoRange(true);            /* Auto-gain ... switches automatically between 1x and 16x */
   
   /* Changing the integration time gives you better sensor resolution (402ms = 16-bit data) */
-  //tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_13MS);      /* fast but low resolution */
-   tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_101MS);  /* medium resolution and speed   */
-  // tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_402MS);  /* 16-bit data but slowest conversions */
+  //tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_13MS);       /* fast but low resolution */
+   tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_101MS);       /* medium resolution and speed   */
+  // tsl.setIntegrationTime(TSL2561_INTEGRATIONTIME_402MS);     /* 16-bit data but slowest conversions */
 
   /* Update these values depending on what you've set above! */  
+  /*
   Serial.println("------------------------------------");
   Serial.print  ("Gain:         "); Serial.println("Auto");
   Serial.print  ("Timing:       "); Serial.println("13 ms");
   Serial.println("------------------------------------");
+  */
 }
 
 
@@ -130,8 +132,8 @@ void setup() {
         ESP.deepSleep(durationSleep * 1000000);
     }
   }
-  Serial.println("Connected to the WiFi network");
-  Serial.print ( "IP address: " );
+  Serial.print("Connected to "); Serial.print(ssid); Serial.print(" Wifi network");
+  Serial.print ( "Got IP address: " );
   Serial.println ( WiFi.localIP() );
   Serial.print("MAC: ");
   Serial.println(WiFi.macAddress());
@@ -180,36 +182,32 @@ void setup() {
   //tsl.begin(&Wire2) directs api to use Wire2, etc.
   if(!tsl.begin())
   {
-    /* There was a problem detecting the TSL2561 ... check your connections */
+    // There was a problem detecting the TSL2561 ... check your connections
     Serial.print("Ooops, no TSL2561 detected ... Check your wiring or I2C ADDR!");
     while(1);
   }
   
-  /* Display some basic information on this sensor */
-  displaySensorDetails();
-  /* Setup the sensor gain and integration time */
-  configureSensor();
-  /* We're ready to go! */
-  Serial.println("");
-
-
-  /* Get a new sensor event */ 
-  sensors_event_t event;
+  
+  //displaySensorDetails();         // Display some basic information on this sensor
+  configureSensor();                // Setup the sensor gain and integration time
+  // We're ready to go!
+  //Serial.println(".");
+ 
+  sensors_event_t event;            // Get a new sensor event
   tsl.getEvent(&event);
  
-  /* Display the results (light is measured in lux) */
+  // Display the results (light is measured in lux)
+  /*
   if (event.light)
   {
     Serial.print("Lux: "); Serial.println(event.light); 
   }
   else
   {
-    /* If event.light = 0 lux the sensor is probably saturated
-       and no reliable data could be generated! */
-    Serial.println("Sensor overload");
+    Serial.println("Sensor overload"); //If event.light = 0 lux the sensor is probably saturated and no reliable data could be generated!
   }
   delay(250);
-
+  */
 
     
 /* -------------------------------- MQTT CONFIG --------------------------------- */
@@ -224,7 +222,8 @@ void setup() {
     } else {                                                            // Si no me puedo conectar hago lo siguiente
       Serial.print("Can not connect to MQTT, I will retry  ");          // Imprimo un mensaje que no me pude conectar por alguna razon (en general es por que no llego al server)
       //Serial.println(client.state());                                 // Si recibo el estado 5 es por falta de coincidencia en la configuración
-      delay(3000);                                                      // Genero un reintento cada 3 segundos para no estresar el server remoto.
+      Serial.print("I'm going to sleep for "); Serial.print(durationSleep); Serial.println(" seconds");
+      ESP.deepSleep(durationSleep * 1000000);                           // Lo pongo en reposo
     }
   }
  
@@ -250,14 +249,17 @@ void setup() {
   Serial.print("Ldr: ");  Serial.println(adc1);
   Serial.print("Lux: ");  Serial.println(event.light);
   Serial.print("SSID: "); Serial.println(ssid);
-  Serial.print("FromIP: "); Serial.println(WiFi.localIP());     // muestro la IP que tiene mi arduino (IP de origen)
-  Serial.print("ESP-MAC-Address: ");  Serial.println(WiFi.macAddress());
-  Serial.print("ToMQTT: "); Serial.println(mqtt_server);        // muestro la IP del MQTT server (IP de destino)
+  Serial.print("ESP-MAC-Address: ");  Serial.println(WiFi.macAddress());  // muestro la mac
+  Serial.print("FromIP: "); Serial.println(WiFi.localIP());               // muestro la IP que tiene mi arduino (IP de origen)
+  Serial.print("ToMQTT: "); Serial.println(mqtt_server);                  // muestro la IP del MQTT server (IP de destino)
+  Serial.println();
+  Serial.print("I'm going to sleep for "); Serial.print(durationSleep); Serial.print(" seconds");
+
   
 
 
 
-
+     
   ESP.deepSleep(durationSleep * 1000000);  // entro ne modo deep-sleep
   
 }

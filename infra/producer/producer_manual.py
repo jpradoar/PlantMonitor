@@ -14,8 +14,6 @@ objs = ["Light", "Door"]
 rand_obj = random.choice(objs)
 
 
-
-#broker_address = "ec2-52-13-47-239.us-west-2.compute.amazonaws.com"
 broker_address = "192.168.0.2"
 broker_portnum = 1883
 cli_id = "00001"

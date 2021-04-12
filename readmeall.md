@@ -35,6 +35,10 @@ Los sensores pueden variar por varias razones.
 
 
 
+### Info no tan relevante pero útil.
+	Al hacer un <b>lsusb</b>,  el nodemcu figura como 
+	Bus 001 Device 031: ID 1a86:7523 QinHeng Electronics HL-340 USB-Serial adapter
+
 
 
 
