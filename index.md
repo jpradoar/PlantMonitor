@@ -88,8 +88,11 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <div align="center"><h3> Pruebas de concepto </h3> </div>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br> 
 </p>
+
+ Si te interesa conocer un poco más de las pruebas lee la parte de [PRUEBAS e INFO](readme_more.md)
+
 
 <br>
 
