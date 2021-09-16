@@ -1,7 +1,7 @@
 ## Monitor de planta "Real Plant Book" + Estacion meteorologica
 
 Este proyecto surge de la necesidad de monitorear el ciclo de vida de una planta en relacion al estado del clima, utilizando tecnologias OpenSource e IoT.
-En este caso, IoT en tomates cherry :tomato:.  (aunque aplica para cualquier otro fin)
+En este caso, IoT en tomates cherry   (aunque aplica para cualquier otro fin)
 
 A través de los sensores, el sistema recolecta datos que son almacenados en una base de datos. Estos a su vez, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "Real Plant Book", el cual refleje los niveles reales y necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento de la planta o fruto. 
 Junto con esto están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc).  
@@ -19,80 +19,85 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 
 ### En el futuro:
-  - Documentar con mayor detalle y traducir a ingles                <b>[En marcha]</b>
-  - Generar un pequeño invernadero con control de ventilación.      <b>[Pendiente...]</b>
-  - Implementar el uso de paneles solares (100% autosustentable).   <b>Hecho!</b>
-  - Generar el sistema de riego automático.                         <b>[Investigando...]</b>
-  - Generar un Plant Book más completo.                             <b>[Pendiente...]</b>
-  - Implementar el uso en Hidroponia.                               <b>[Pendiente...]</b>
-  - Implementar desarrollo a una escala mayor.                      <b>[Investigando...]</b>
-  - Implementar sistema de usuarios para api.                       <b>[Pendiente...]</b>
-
+|Descripcion    | Estado    | 
+|---            |---        |
+| Documentar con mayor detalle y traducir a ingles             |   En marcha      |
+| Generar un pequeño invernadero con control de ventilación.   |   Pendiente      |
+| Implementar el uso de paneles solares (100% autosustentable).|   Hecho          |
+| Generar el sistema de riego automático.                      |   Investigando   |
+| Generar un Plant Book más completo.                          |   Pendiente      |
+| Implementar el uso en Hidroponia.                            |   Pendiente      |
+| Implementar desarrollo a una escala mayor.                   |   Investigando   |
+| Implementar sistema de usuarios para api.                    |   Pendiente      |
 <br>
 
-### Panel del sistema completo de la planta (Grafana)
+
+<div align="center"><h3> Panel del sistema completo de la planta (Grafana) </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/grafana-panel.png"/>
 </p>
 
 <br>
 
-### Mensajes y alertas en Slack + Thresholds/Umbrales configurables
+
+<div align="center"><h3> Interfaz web del modulo de la planta </h3> </div>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/grafana-alert-slack.png"  width="50%" height="50%"  />
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/module-web.png"  width="30%" height="30%"  />
 </p>
 
-<br>
+<br><br><br>
 
-### Interfaz web del modulo de la planta
+
+<div align="center"><h3> Circuitos </h3> </div>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/module-web.png"  width="50%" height="50%"  />
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Fritzing-graph.png"  width="70%" height="70%"/>
 </p>
 
 
 <br><br><br>
 
-### Materiales (Pending...)
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/dht22.jpg"  width="20%" height="20%"/>   
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/ldr.jpg"  width="20%" height="20%"/><br>
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Soil.jpg" width="20%" height="20%"/>    
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="20%" height="20%"/><br>
- <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/panel-solar.png"  width="20%" height="20%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
-</p>
-
-<br><br><br>
-
-### Circuitos
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Fritzing-graph.png"  width="50%" height="50%"/>
-</p>
-
-
-<br><br><br>
-
-### Arquitectura
+<div align="center"><h3> Arquitectura y descripcion de componentes </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/arquitectura.png"/>
 </p>
 
+<br>
+
+|Componente     | Funcion    | Obs | 
+|---            |---         | ---      |
+| Panel solar   | Generador de energia para las baterías     | - | 
+| Bateria       | Almacenamiento de la energía obtenida del panel solar   | - | 
+| ESP           | Core del desarrollo, donde esta toda la lógica de sensores     | - | 
+| LDR           | Medir la intensidad de la luz     | Con esto calculo la cantidad y el tiempo de luz que le da a la planta | 
+| Lux Sensor    | Medir la intensidad de la luz | Mismo concepto que el LDR pero dedicado a [Lux](https://es.wikipedia.org/wiki/Lux)
+| 16Bit I2C     | Conversor de analógico a digital  | Como el ESP tiene 1 solo pin analógico uso esto para poder usar sensores analógicos|
+| DHT22         | Medir temperatura y humedad del aire      | Lo uso para calcular el estado del clima y con eso hago algunas predicciones básicas   | 
+| Soil Sensor   | Medir humedad de la tierra | Lo uso para saber si la plata necesita humedad o si la tierra esta muy seca    | 
+| MQTT          | Servidor donde van todas las mediciones ([mosquitto-mqtt](https://mosquitto.org/)) | - | 
+| Subscriber    | Consumir los mensajes del MQTT Server y enviar a la DB (InfluxDB) | - | 
+| InfluxDB      | Guardar un histórico de toda la información obtenida de los sensores.  | - | 
+| smn-Consumer  | Función que consulta el estado del tiempo real  | Lo uso para ver el diferencial entre mis sensores y la temperatura real    | 
+| SMN           | [Servicio Meteorológico Nacional](https://www.smn.gob.ar/) | Gracias gente por ofrecer la api gratis :)  | 
+| http-API      | Api para consumo de data  | La uso para consumir data sin hacer Querys directo a la DB  | 
+| MySQL         | Base de datos de usuarios (ABM) | Lo uso para generar usuarios para la API o cualquier otra función que no sea 100% publica    | 
+| Nginx         | Front End | - | 
+| Grafana       | Visualización de toda la data  | - | 
+
+
+
+
+
 
 <br><br><br>
 
-### Pruebas de concepto
+<div align="center"><h3> Pruebas de concepto </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br>
-</p>
-<p align="center">Mono "invernadero" (cañas de bambú y bolsa Polipropileno)<br>
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
-</p>
-<p align="center">Final<br>
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
 
 <br>
 
-### Cómo correr/ejecutar
+<div align="center"><h3> Cómo correr/ejecutar </h3> </div>
 <pre>
 git clone https://github.com/jpradoar/PlantMonitor.git
 cd PlantMonitor/infra/
@@ -101,7 +106,8 @@ docker-compose up -d
 
 <br>
 
-### Preguntas frecuentes: (FAQ)
+
+<div align="center"><h3> Preguntas frecuentes: (FAQ) </h3> </div>
  - <b>El proyecto es publico, ¿tiene algún costo?</b><br>
     El proyecto es Open Source, es decir que todo el codigo està documentado y publicado para que cualquiera lo pueda usar, modificar y mejorar.
     100% reproducible por cualquier persona sin costo alguno. (solo deberías conseguir los materiales)
