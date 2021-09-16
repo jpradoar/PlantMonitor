@@ -1,14 +1,5 @@
-## Weather and PlantMonitor "Real Plant Book"  :chart_with_downwards_trend: :seedling:
+## Weather and PlantMonitor "Real Plant Book" 
 
-- Esta es la versión v0.1.0-beta.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
-- Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
-
-- <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
-- Contacto: jpradoar @ gmail . com
-
-### Info
-
-### Info
 Este proyecto surge de la necesidad de monitorear el estado del clima y el ciclo de vida de una planta, usando tecnologías Open Hardware, bajo el concepto de IoT.
 En este caso, Internet en tomates cherry :tomato:. 
 
@@ -18,6 +9,12 @@ Junto con esto están configurados unos niveles máximos y mínimos de alertas, 
 El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
 Adicionalmente, el sistema consume información del Servicio Meteorológico Nacional (SMN) y la guarda en la base de datos, la cual es mostrada en el mismo panel para tener visibilidad real y precisa. (Punto de comparación), ya que el sistema puede mostrar distintas mediciones dependiendo del lugar donde esté (ej: si esta en un balcón, o si esta en el interior de una casa)
+
+### Info
+- Esta es la versión v0.1.0-beta.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
+- Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
+- <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
+- Contacto: jpradoar @ gmail . com
 
 
 ### En el futuro:
