@@ -19,6 +19,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 
 ### En el futuro:
+
 |Descripcion    | Estado    | 
 |---            |---        |
 | Documentar con mayor detalle y traducir a ingles             |   En marcha      |
@@ -29,7 +30,8 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | Implementar el uso en Hidroponia.                            |   Pendiente      |
 | Implementar desarrollo a una escala mayor.                   |   Investigando   |
 | Implementar sistema de usuarios para api.                    |   Pendiente      |
-<br>
+
+
 
 <br>
 
