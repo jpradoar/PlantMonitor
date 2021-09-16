@@ -54,11 +54,11 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Materiales (Pending...)
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/dht22.jpg"  width="30%" height="30%"/>   
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/ldr.jpg"  width="30%" height="30%"/><br>
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Soil.jpg" width="30%" height="30%"/>    
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/><br>
- <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/panel-solar.png"  width="30%" height="30%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/dht22.jpg"  width="20%" height="20%"/>   
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/ldr.jpg"  width="20%" height="20%"/><br>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Soil.jpg" width="20%" height="20%"/>    
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="20%" height="20%"/><br>
+ <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/panel-solar.png"  width="20%" height="20%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
 </p>
 
 <br><br><br>
