@@ -32,21 +32,21 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Panel del sistema completo de la planta (Grafana)
 <p align="center">
-  <img src="img/grafana-panel.png"/>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/grafana-panel.png"/>
 </p>
 
 <br>
 
 ### Mensajes y alertas en Slack + Thresholds/Umbrales configurables
 <p align="center">
-  <img src="img/grafana-alert-slack.png"  width="50%" height="50%"  />
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/grafana-alert-slack.png"  width="50%" height="50%"  />
 </p>
 
 <br>
 
 ### Interfaz web del modulo de la planta
 <p align="center">
-  <img src="img/module-web.png"  width="50%" height="50%"  />
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/module-web.png"  width="50%" height="50%"  />
 </p>
 
 
@@ -54,18 +54,18 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Materiales (Pending...)
 <p align="center">
-  <img src="img/dht22.jpg"  width="30%" height="30%"/>   
-  <img src="img/ldr.jpg"  width="30%" height="30%"/><br>
-  <img src="img/Soil.jpg" width="30%" height="30%"/>    
-  <img src="img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/><br>
- <img src="img/panel-solar.png"  width="30%" height="30%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/dht22.jpg"  width="30%" height="30%"/>   
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/ldr.jpg"  width="30%" height="30%"/><br>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Soil.jpg" width="30%" height="30%"/>    
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="30%" height="30%"/><br>
+ <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/panel-solar.png"  width="30%" height="30%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
 </p>
 
 <br><br><br>
 
 ### Circuitos
 <p align="center">
-  <img src="img/Fritzing-graph.png"  width="50%" height="50%"/>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Fritzing-graph.png"  width="50%" height="50%"/>
 </p>
 
 
@@ -73,21 +73,21 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Arquitectura
 <p align="center">
-  <img src="img/arquitectura.png"/>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/arquitectura.png"/>
 </p>
 
 
 <br><br><br>
 
-### Prueba de concepto
+### Pruebas de concepto
 <p align="center">
-  <img src="img/plant00.jpg" width="50%" height="50%" /><br>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
 <p align="center">Mono "invernadero" (cañas de bambú y bolsa Polipropileno)<br>
-  <img src="img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
 <p align="center">Final<br>
-  <img src="img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
+  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
 
 <br>
