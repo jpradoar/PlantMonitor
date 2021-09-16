@@ -1,14 +1,15 @@
-## Weather and PlantMonitor "Real Plant Book" 
+## Estacion meteorologica + Monitor de planta "Real Plant Book" 
 
-Este proyecto surge de la necesidad de monitorear el estado del clima y el ciclo de vida de una planta, usando tecnologías Open Hardware, bajo el concepto de IoT.
-En este caso, Internet en tomates cherry :tomato:. 
+Este proyecto surge de la necesidad de monitorear el estado del clima y el ciclo de vida de una planta, utilizando tecnologias OpenSource e IoT.
+En este caso, IoT en tomates cherry :tomato:.  (aunque aplica para cualquier otro cultivo)
 
 A través de los sensores, el sistema recolecta datos que son almacenados en una base de datos. Estos a su vez, son mostrados en un panel en tiempo real, para luego generar lo que yo llamo un "Real Plant Book", el cual refleje los niveles reales y necesarios, (e ideales en el mejor de los casos), para un correcto y continuo crecimiento de la planta o fruto. 
-Junto con esto están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc).  Al cabo de un año de uso, se podrá tener el histórico completo del estado del clima más el estado de la plata (comportamiento) según clima. 
+Junto con esto están configurados unos niveles máximos y mínimos de alertas, (agua, sol, etc) que, en el caso de que estos estén fuera de los niveles establecidos, enviará automáticamente una alerta para analizar el problema, (mucho calor, poca agua, etc etc).  
+Al cabo de un año de uso, se podrá tener el histórico completo del estado del clima más el estado de la plata (comportamiento) según clima. 
 
 El sistema también cuenta con una simple API que puede ser consultada públicamente, para fines múltiples.
 
-Adicionalmente, el sistema consume información del Servicio Meteorológico Nacional (SMN) y la guarda en la base de datos, la cual es mostrada en el mismo panel para tener visibilidad real y precisa. (Punto de comparación), ya que el sistema puede mostrar distintas mediciones dependiendo del lugar donde esté (ej: si esta en un balcón, o si esta en el interior de una casa)
+Adicionalmente, el sistema consume información del Servicio Meteorológico Nacional (SMN) y la guarda en la base de datos, la cual es mostrada en el mismo panel para tener visibilidad real y precisa. (Punto de comparación), ya que el sistema puede mostrar distintas mediciones dependiendo del lugar donde esté (ej: si esta en un balcón, o si esta en el interior de una casa).
 
 ### Info
 - Esta es la versión v0.1.0-beta.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
@@ -20,12 +21,12 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 ### En el futuro:
   - Documentar con mayor detalle y traducir a ingles                <b>[En marcha]</b>
   - Generar un pequeño invernadero con control de ventilación.      <b>[Pendiente...]</b>
-  - Implementar el uso de paneles solares (100% autosustentable).   <b>[En marcha]</b>
+  - Implementar el uso de paneles solares (100% autosustentable).   <b>Hecho!</b>
   - Generar el sistema de riego automático.                         <b>[Investigando...]</b>
   - Generar un Plant Book más completo.                             <b>[Pendiente...]</b>
   - Implementar el uso en Hidroponia.                               <b>[Pendiente...]</b>
-  - Implementar desarrollo a una escala mayor.                      <b>[Pendiente...]</b>
-  - Implementar sistema de usuarios para api.                       <b>[En marcha]</b>
+  - Implementar desarrollo a una escala mayor.                      <b>[Investigando...]</b>
+  - Implementar sistema de usuarios para api.                       <b>[Pendiente...]</b>
 
 <br>
 
@@ -104,7 +105,6 @@ docker-compose up -d
  - <b>El proyecto es publico, ¿tiene algún costo?</b><br>
     El proyecto es Open Source, es decir que todo el codigo està documentado y publicado para que cualquiera lo pueda usar, modificar y mejorar.
     100% reproducible por cualquier persona sin costo alguno. (solo deberías conseguir los materiales)
-    Y lo más importante, es sin fines de lucro.
 
  - <b>Que tanto va a crecer este proyecto?</b><br>
     Mi idea es poder crecer hasta tener un sistema completo de monitoreo, 
@@ -114,7 +114,7 @@ docker-compose up -d
     Si, puedes implementarlo sin problemas. (de hecho seria genial!)
 
  - <b>Tengo una huerta y/o invernadero y quiero implementarlo. Puedo agregar mas sensores?</b><br>
-    Si, puedes agregar tantos sensores como la cantidad de pines (o más si usas expansor analogico!). O bien puedes agregar más sensores.
+    Si, puedes agregar tantos sensores como la cantidad de pines (o más si usas expansor analogico!). O bien puedes agregar más sensores digitales.
  
  - <b>No tengo una huerta ni invernadero pero quiero usarlo como una Estación meteorológica . Puedo agregar mas sensores?</b><br>
     Claro, puedes usarlo solo como Estación meteorológica en tu casa/balcon/etc y hasta agregar tus propios sensores. Seria genial!
