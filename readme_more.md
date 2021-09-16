@@ -1,6 +1,8 @@
+# Info relevante.
+
 ###  | [Home](index.md) | [Linkedin](https://www.linkedin.com/in/jonathan-prado-87b1b628) | [Github](https://github.com/jpradoar/)
 
-# Info relevante.
+<br>
 
 ### Sensores:
 Vale aclarar que los sensores son los mas economicos del mercado, por tal motivo, no se puede pretender mucho de ellos. Aunque para ser franco funcionan bastante bien. 
