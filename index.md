@@ -1,4 +1,4 @@
-## Estacion meteorologica + Monitor de planta "Real Plant Book" 
+## Monitor de planta "Real Plant Book" + Estacion meteorologica
 
 Este proyecto surge de la necesidad de monitorear el ciclo de vida de una planta en relacion al estado del clima, utilizando tecnologias OpenSource e IoT.
 En este caso, IoT en tomates cherry :tomato:.  (aunque aplica para cualquier otro fin)
