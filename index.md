@@ -101,8 +101,11 @@ docker-compose up -d
 | Medicion de sensores SMN                                     |   Hecho          | 
 | Implementar el uso de paneles solares (100% autosustentable).|   Hecho          |
 | Implementar en Docker + docker-compose                       |   Hecho          |
-| Implementar cloud                                            |   Hecho          |
+| Implementar en cloud                                         |   Hecho          |
+| Construir caja protectora                                    |   Investigando   |
 | Documentar con mayor detalle y traducir a ingles             |   En marcha      |
+| Implementar un [pluviómetro](https://es.wikipedia.org/wiki/Pluvi%C3%B3metro)                                   |   Pendiente      |
+| Implementar un [anemómetro de viento](https://es.wikipedia.org/wiki/Anem%C3%B3metro)                          |   Pendiente      |
 | Generar el sistema de riego automático.                      |   Investigando   |
 | Generar un Plant Book más completo.                          |   Pendiente      |
 | Implementar el uso en Hidroponia.                            |   Pendiente      |
