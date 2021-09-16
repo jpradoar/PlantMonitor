@@ -45,7 +45,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <div align="center"><h3> Arquitectura y descripcion de componentes </h3> </div>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/arquitectura.png"/>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/arquitectura2.png"/>
 </p>
 
 <br>
