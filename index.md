@@ -63,6 +63,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <br>
 
+
 |Componente     | Funcion    | Obs | 
 |---            |---         | ---      |
 | Panel solar   | Generador de energia para las baterías     | - | 
@@ -82,9 +83,6 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | MySQL         | Base de datos de usuarios (ABM) | Lo uso para generar usuarios para la API o cualquier otra función que no sea 100% publica    | 
 | Nginx         | Front End | - | 
 | Grafana       | Visualización de toda la data  | - | 
-
-
-
 
 
 
