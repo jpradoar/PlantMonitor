@@ -43,10 +43,23 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <br>
 
-<div align="center"><h3> Arquitectura y descripcion de componentes </h3> </div>
+<div align="center"><h3> Diseño y Arquitectura </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/arquitectura2.png"/>
 </p>
+
+<br>
+<div align="center"><h3> Tecnologias y descripcion de componentes </h3> </div>
+
+|Tecnologias / Lenguajes | Uso | Obs |
+|---       |---  |---  |
+|C++       | Para todo el core en Arduino/ESP | - | 
+|Python    | Para las API | - | 
+|PHP       | Para el ABM de usuarios | - | 
+|HTML      | Para el front end | - | 
+|Docker    | Como microservicios | Podria usar servicios cloud, pero prefiero que sea "Cloud Agnostic"  |
+|docker-compose  | Para levantar todo el stack | Tambien esta implementado sobre Kubernetes, pero a fines practicos es mas simple correrlo en docker-compose |
+
 
 <br>
 
@@ -69,16 +82,6 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | MySQL         | Base de datos de usuarios (ABM) | Lo uso para generar usuarios para la API o cualquier otra función que no sea 100% publica    | 
 | Nginx         | Front End | - | 
 | Grafana       | Visualización de toda la data  | - | 
-
-<br>
-
-|Lenguajes | Uso | Obs |
-|---       |---  |---  |
-|C++       | Para todo el core en Arduino/ESP | - | 
-|Python    | Para las API | - | 
-|PHP       | Para el ABM de usuarios | - | 
-|HTML      | Para el front end | - | 
-|Docker    | Para todos los compoentes | Podria usar servicios cloud, pero prefiero que sea "Cloud Agnostic"  | 
 
 <br>
 
@@ -109,6 +112,7 @@ docker-compose up -d
 | Medicion de sensores SMN                                     |   Hecho          | 
 | Implementar el uso de paneles solares (100% autosustentable).|   Hecho          |
 | Implementar en Docker + docker-compose                       |   Hecho          |
+| Implementar en kubernetes                                    |   Hecho          |
 | Implementar en cloud                                         |   Hecho          |
 | Construir caja protectora                                    |   Investigando   |
 | Documentar con mayor detalle y traducir a ingles             |   En marcha      |
