@@ -70,7 +70,15 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | Nginx         | Front End | - | 
 | Grafana       | Visualización de toda la data  | - | 
 
+<br>
 
+|Lenguajes | Uso | Obs |
+|---       |---  |---  |
+|C++       | Para todo el core en Arduino/ESP | - | 
+|Python    | Para las API | - | 
+|PHP       | Para el ABM de usuarios | - | 
+|HTML      | Para el front end | - | 
+|Docker    | Para todos los compoentes | Podria usar servicios cloud, pero prefiero que "Cloud Agnostic"  | 
 
 <br>
 
