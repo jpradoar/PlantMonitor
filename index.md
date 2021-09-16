@@ -31,13 +31,14 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | Implementar sistema de usuarios para api.                    |   Pendiente      |
 <br>
 
+<br><hr>
 
 <div align="center"><h3> Panel del sistema completo de la planta (Grafana) </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/grafana-panel.png"/>
 </p>
 
-<br>
+<br><hr>
 
 
 <div align="center"><h3> Interfaz web del modulo de la planta </h3> </div>
@@ -45,7 +46,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/module-web.png"  width="30%" height="30%"  />
 </p>
 
-<br><br><br>
+<br><hr>
 
 
 <div align="center"><h3> Circuitos </h3> </div>
@@ -54,7 +55,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 </p>
 
 
-<br><br><br>
+<br><hr>
 
 <div align="center"><h3> Arquitectura y descripcion de componentes </h3> </div>
 <p align="center">
@@ -62,7 +63,6 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 </p>
 
 <br>
-
 
 |Componente     | Funcion    | Obs | 
 |---            |---         | ---      |
@@ -86,14 +86,16 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 
 
-<br><br><br>
+<br><hr>
+
 
 <div align="center"><h3> Pruebas de concepto </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
 
-<br>
+<br><hr>
+
 
 <div align="center"><h3> Cómo correr/ejecutar </h3> </div>
 <pre>
@@ -102,7 +104,7 @@ cd PlantMonitor/infra/
 docker-compose up -d
 </pre>
 
-<br>
+<br><hr>
 
 
 <div align="center"><h3> Preguntas frecuentes: (FAQ) </h3> </div>
