@@ -78,7 +78,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 |Python    | Para las API | - | 
 |PHP       | Para el ABM de usuarios | - | 
 |HTML      | Para el front end | - | 
-|Docker    | Para todos los compoentes | Podria usar servicios cloud, pero prefiero que "Cloud Agnostic"  | 
+|Docker    | Para todos los compoentes | Podria usar servicios cloud, pero prefiero que sea "Cloud Agnostic"  | 
 
 <br>
 
