@@ -17,22 +17,6 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 - <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
 - Contacto: jpradoar @ gmail . com
 
-
-### En el futuro:
-
-|Descripcion    | Estado    | 
-|---            |---        |
-| Documentar con mayor detalle y traducir a ingles             |   En marcha      |
-| Generar un pequeño invernadero con control de ventilación.   |   Pendiente      |
-| Implementar el uso de paneles solares (100% autosustentable).|   Hecho          |
-| Generar el sistema de riego automático.                      |   Investigando   |
-| Generar un Plant Book más completo.                          |   Pendiente      |
-| Implementar el uso en Hidroponia.                            |   Pendiente      |
-| Implementar desarrollo a una escala mayor.                   |   Investigando   |
-| Implementar sistema de usuarios para api.                    |   Pendiente      |
-
-
-
 <br>
 
 <div align="center"><h3> Panel del sistema completo de la planta (Grafana) </h3> </div>
@@ -105,6 +89,25 @@ git clone https://github.com/jpradoar/PlantMonitor.git
 cd PlantMonitor/infra/
 docker-compose up -d
 </pre>
+
+<br>
+
+
+<div align="center"><h3> En el futuro </h3> </div>
+
+|Descripcion    | Estado    | 
+|---            |---        |
+| Medicion de sensores                                         |   Hecho          |
+| Medicion de sensores SMN                                     |   Hecho          | 
+| Implementar el uso de paneles solares (100% autosustentable).|   Hecho          |
+| Implementar en Docker + docker-compose                       |   Hecho          |
+| Implementar cloud                                            |   Hecho          |
+| Documentar con mayor detalle y traducir a ingles             |   En marcha      |
+| Generar el sistema de riego automático.                      |   Investigando   |
+| Generar un Plant Book más completo.                          |   Pendiente      |
+| Implementar el uso en Hidroponia.                            |   Pendiente      |
+| Implementar desarrollo a una escala mayor.                   |   Investigando   |
+| Implementar sistema de usuarios para api.                    |   Pendiente      |
 
 <br>
 
