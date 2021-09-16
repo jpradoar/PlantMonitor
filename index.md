@@ -32,21 +32,21 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Panel del sistema completo de la planta (Grafana)
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/grafana-panel.png"/>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/grafana-panel.png"/>
 </p>
 
 <br>
 
 ### Mensajes y alertas en Slack + Thresholds/Umbrales configurables
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/grafana-alert-slack.png"  width="50%" height="50%"  />
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/grafana-alert-slack.png"  width="50%" height="50%"  />
 </p>
 
 <br>
 
 ### Interfaz web del modulo de la planta
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/module-web.png"  width="50%" height="50%"  />
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/module-web.png"  width="50%" height="50%"  />
 </p>
 
 
@@ -54,18 +54,18 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Materiales (Pending...)
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/dht22.jpg"  width="20%" height="20%"/>   
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/ldr.jpg"  width="20%" height="20%"/><br>
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Soil.jpg" width="20%" height="20%"/>    
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="20%" height="20%"/><br>
- <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/panel-solar.png"  width="20%" height="20%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/dht22.jpg"  width="20%" height="20%"/>   
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/ldr.jpg"  width="20%" height="20%"/><br>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Soil.jpg" width="20%" height="20%"/>    
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/analog-digital-converter-16-bit-ads1115.jpg"  width="20%" height="20%"/><br>
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/panel-solar.png"  width="20%" height="20%"/> Panel Solar 9v 222ma 2w 115 X 115 Mm
 </p>
 
 <br><br><br>
 
 ### Circuitos
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/Fritzing-graph.png"  width="50%" height="50%"/>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Fritzing-graph.png"  width="50%" height="50%"/>
 </p>
 
 
@@ -73,7 +73,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Arquitectura
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/arquitectura.png"/>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/arquitectura.png"/>
 </p>
 
 
@@ -81,13 +81,13 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 ### Pruebas de concepto
 <p align="center">
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/plant00.jpg" width="50%" height="50%" /><br>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br>
 </p>
 <p align="center">Mono "invernadero" (cañas de bambú y bolsa Polipropileno)<br>
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/mono-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
 <p align="center">Final<br>
-  <img src="https://github.com/jpradoar/PlantMonitor/tree/master/img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/planta-invernadero.jpg"  width="50%" height="50%"  /><br>
 </p>
 
 <br>
