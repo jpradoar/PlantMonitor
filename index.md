@@ -18,7 +18,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 ### Que quiero lograr con esto?
  - Armar un "PlantBook" de una planta X en una zona particular del planeta
  - Monitorear el ciclo de vida y entorno "ideal" para el crecimiento natural de una planta
- - Con un PlantBook podría reproducir el crecimiento de una planta que crece en otro país, en el balcón de casa :D 
+ - Con ese PlantBook podría reproducir el crecimiento de una planta que crece en otro país, en el balcón de casa :D 
  - Si varias personas en distintos países arman su propio PlantBook, estos podrían ser publicados y personas de todo el mundo podrían reproducir dicha planta por mas que no exista en el país local. 
 
 ### Info
