@@ -15,6 +15,12 @@ El sistema también cuenta con una simple API que puede ser consultada públicam
 
 Adicionalmente, el sistema consume información del Servicio Meteorológico Nacional (SMN) y la guarda en la base de datos, la cual es mostrada en el mismo panel para tener visibilidad real y precisa. (Punto de comparación), ya que el sistema puede mostrar distintas mediciones dependiendo del lugar donde esté (ej: si esta en un balcón, o si esta en el interior de una casa).
 
+### Que quiero lograr con esto?
+ - Armar un "PlantBook" de una planta X en una zona particular del planeta
+ - Monitorear el ciclo de vida y entorno "ideal" para el crecimiento natural de una planta
+ - Con un PlantBook podría reproducir el crecimiento de una planta que crece en otro país, en el balcón de casa :D 
+ - Si varias personas en distintos países arman su propio PlantBook, estos podrían ser publicados y personas de todo el mundo podrían reproducir dicha planta por mas que no exista en el país local. 
+
 ### Info
 - Esta es la versión v0.1.0-beta.  Si bien es completamente funcional, algunas partes del sistema no tienen el mejor diseño ni el código más elegante. 
 - Sientete libre de "forckear" y mejorar. O si crees que puedes ayudarme a mejorar el código, bienvenido seas!
