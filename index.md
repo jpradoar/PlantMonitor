@@ -27,6 +27,26 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 - <b>Si crees que es interesante para tu jardín, huerta o invernadero por favor contactame, seguramente podremos hacer algo fantástico juntos!</b>
 - Contacto: jpradoar @ gmail . com
 
+
+
+<br>
+
+<div align="center"><h3> MVP (Minimo Producto Viable)</h3> </div>
+<p align="center">
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box0.jpeg" width="30%" height="30%" />
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box2.jpeg" width="30%" height="30%" />
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box3.jpeg" width="30%" height="30%" />
+ <br>
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box1.jpeg" width="30%" height="30%" />
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box4.jpeg" width="30%" height="30%" />
+</p>
+
+<div align="center"><h3> Pruebas de concepto </h3> </div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="30%" height="30%" /><br> 
+</p>
+
+
 <br>
 
 <div align="center"><h3> Panel del sistema completo de la planta (Grafana) </h3> </div>
@@ -92,17 +112,6 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 | MySQL         | Base de datos de usuarios (ABM) | Lo uso para generar usuarios para la API o cualquier otra función que no sea 100% publica    | 
 | Nginx         | Front End | - | 
 | Grafana       | Visualización de toda la data  | - | 
-
-<br>
-
-
-<div align="center"><h3> Pruebas de concepto </h3> </div>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="50%" height="50%" /><br> 
-</p>
-
- Si te interesa conocer un poco más de las pruebas lee la parte de [PRUEBAS e INFO](readme_more.md)
-
 
 <br>
 
