@@ -2,12 +2,7 @@
 
 ### <a href="https://www.linkedin.com/in/jonathan-prado-87b1b628" target="_blank" > <img src="https://www.svgrepo.com/show/303299/linkedin-icon-2-logo.svg" width="3%" height="3%" > </a>  | [Home](https://jpradoar.github.io/PlantMonitor/) | [Construcción](https://jpradoar.github.io/PlantMonitor/construccion)  | 
 
-<br> 
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/all.jpeg" width="30%" height="30%"  />
-</p>
-
+<br>
 
 <div align="center"><h3> El material utilizado </h3> </div>
 
@@ -46,4 +41,17 @@ Finalmente quedo así:
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/veleta02.jpeg"  width="30%" height="30%"  />
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/veleta03.jpeg"  width="30%" height="30%"  />
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/veleta04.jpeg"  width="30%" height="30%"  />
+</p>
+
+
+
+
+<br> <br> <br> 
+
+Quién esta detras de todo esto: 
+
+Jonathan (Jtan para los amigos).  Ciclista de toda la vida y entusiasta del software libre.
+He estado involucrado en el área de sistemas por más de diez años. Curioso, flexible, adaptable y muy creativo, amo "pensar fuera de la caja". Emprendedor por naturaleza y apasionado por la tecnología.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/all.jpeg" width="30%" height="30%"  />
 </p>
