@@ -1,6 +1,6 @@
 ## La construcción y el detras de escena
 
-### | [Home](https://jpradoar.github.io/PlantMonitor/) | [Linkedin](https://www.linkedin.com/in/jonathan-prado-87b1b628) | [Github](https://github.com/jpradoar/) |
+### <a href="https://www.linkedin.com/in/jonathan-prado-87b1b628" target="_blank" > <img src="https://www.svgrepo.com/show/303299/linkedin-icon-2-logo.svg" width="3%" height="3%" > </a>  | [Home](https://jpradoar.github.io/PlantMonitor/) | [Construcción](https://jpradoar.github.io/PlantMonitor/construccion)  | 
 
 <br> 
 
