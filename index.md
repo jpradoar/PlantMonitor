@@ -50,7 +50,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <div align="center"><h3> Si te interesa saber como construí todo, acá tenes el paso a paso</h3> </div>
 <p align="center">
- <a href="https://jpradoar.github.io/PlantMonitor/construccion"> <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/tool.png" width="20%" height="20%" /> </img> </a>
+ <a href="https://jpradoar.github.io/PlantMonitor/construccion"> <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/tool.png" width="20%" height="20%" /> </a>
 </p>
 
 
