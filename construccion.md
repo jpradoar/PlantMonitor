@@ -22,6 +22,7 @@ Finalmente le coloque un sellador de silicona para evitar filtraciones.
 Lo deje secar un día completo al sol y para hacer una prueba le puse agua adentro. Paso la prueba sin problemas. :) 
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/medidas.png" width="20%" height="20%"  />
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/construccion-01.jpeg" width="40%" height="40%"  />
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/construccion-02.jpeg" width="30%" height="30%"  />
 </p>
