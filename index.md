@@ -1,6 +1,6 @@
 ## Monitor de planta "Real Plant Book" + Estacion meteorologica
 
-###   | [Linkedin](https://www.linkedin.com/in/jonathan-prado-87b1b628) | [Github](https://github.com/jpradoar/) |
+###  | [Home](https://jpradoar.github.io/PlantMonitor/)  | [Linkedin](https://www.linkedin.com/in/jonathan-prado-87b1b628) | [Github](https://github.com/jpradoar/) |
 
 <br> 
 
@@ -44,6 +44,13 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 <div align="center"><h3> Pruebas de concepto </h3> </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/plant00.jpg" width="30%" height="30%" /><br> 
+</p>
+
+<br>
+
+<div align="center"><h3> Si te interesa saber como construí todo, acá tenes el paso a paso</h3> </div>
+<p align="center">
+ <a href="https://jpradoar.github.io/PlantMonitor/construccion"> <img src="http://pngwebicons.com/uploads/tool/256/tool_icon4137.png" width="20%" height="20%" /> </img>
 </p>
 
 
