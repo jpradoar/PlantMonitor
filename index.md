@@ -143,11 +143,11 @@ docker-compose up -d
 | Implementar en Docker + docker-compose                       |   Hecho          |
 | Implementar en kubernetes                                    |   Hecho          |
 | Implementar en cloud                                         |   Hecho          |
-| Construir caja protectora                                    |   Investigando   |
+| Construir caja protectora                                    |   Hecho          |
 | Documentar con mayor detalle y traducir a ingles             |   En marcha      |
-| Implementar un [pluviómetro](https://es.wikipedia.org/wiki/Pluvi%C3%B3metro)                                   |   Pendiente      |
-| Implementar un [anemómetro de viento](https://es.wikipedia.org/wiki/Anem%C3%B3metro)                          |   Pendiente      |
-| Generar el sistema de riego automático.                      |   Investigando   |
+| Implementar un [pluviómetro](https://es.wikipedia.org/wiki/Pluvi%C3%B3metro)                                   |   En marcha      |
+| Implementar un [anemómetro de viento](https://es.wikipedia.org/wiki/Anem%C3%B3metro)                          |   En marcha      |
+| Generar el sistema de riego automático.                      |   Pendiente   |
 | Generar un Plant Book más completo.                          |   Pendiente      |
 | Implementar el uso en Hidroponia.                            |   Pendiente      |
 | Implementar desarrollo a una escala mayor.                   |   Investigando   |
