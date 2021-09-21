@@ -74,7 +74,7 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <div align="center"><h3> Circuitos </h3> </div>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Fritzing-graph.png"  width="70%" height="70%"/>
+  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/Fritzing-graph-v2.png"  width="70%" height="70%"/>
 </p>
 
 
