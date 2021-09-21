@@ -18,7 +18,7 @@ Ticker ticker;                  // https://blog.creations.de/?p=149
 
 
 /*-------------------------------- MQTT SERVER CONFIGURATION -------------------------------- */
-const char* mqtt_server       = "1.2.3.4";                // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
+const char* mqtt_server       = "1.2.3.4"; // Servidor donde esta el MQTT server (puede ser un endpoint de aws (un NLB)
 const int   mqtt_port         =  1883;                    // Puerto del MQTT
 const char *mqtt_user         = "admin";                  // USER
 const char *mqtt_pass         = "admin";                  // PASS
@@ -54,8 +54,8 @@ const char* ssid       = "mi-wifi-ssid";           // your wifi name
 const char* password   = "mi-wifi-pass";           // your wifi pass
 
 /* -------------------------------- DEEP-SLEEP CONFIG --------------------------------- */
-#define durationSleep  60                   // 1 second = 1,000,000 microseconds
-#define NB_TRYWIFI     10                   // number of try to connect WiFi
+#define durationSleep  30 // 1 second = 1,000,000 microseconds (si uso 60 se apaga el powerbank)
+#define NB_TRYWIFI     10 // number of try to connect WiFi
 
 void tick()
 {
@@ -156,6 +156,7 @@ void setup() {
 
   short adc0 = ads.readADC_SingleEnded(0);      // (SOIL) Leo del expansor analogico la posicion 0 para obtener datos del A0 del ADS1115SOIL que tiene conectado otro sensor 
   short adc1 = ads.readADC_SingleEnded(1);      // (LDR)  Leo del expansor analogico la posicion 0 para obtener datos del A1 del ADS1115SOIL que tiene conectado otro sensor 
+  short adc2 = ads.readADC_SingleEnded(2);      // (Water Sensor)
   
   soilmoisturepercent = map(adc0, AirValue, WaterValue, 0, 100); // Aca mapeo el dato del sendor de tierra (SOIL) junto con los valores maximos y minimos que declare al principio
 
@@ -198,12 +199,10 @@ void setup() {
  
   // Display the results (light is measured in lux)
   /*
-  if (event.light)
-  {
+  if (event.light)  {
     Serial.print("Lux: "); Serial.println(event.light); 
   }
-  else
-  {
+  else {
     Serial.println("Sensor overload"); //If event.light = 0 lux the sensor is probably saturated and no reliable data could be generated!
   }
   delay(250);
@@ -239,6 +238,8 @@ void setup() {
   client.publish("Ldr", String(adc1).c_str(), false);                   // uso false para que el mensaje no persista en el MQTT server una vez consumido
   delay(500);
   client.publish("Lux", String(event.light).c_str(), false);
+  delay(500);
+  client.publish("Water", String(adc2).c_str(), false);  
   client.disconnect();                                                  // me desconecto
 
 
@@ -248,6 +249,7 @@ void setup() {
   Serial.print("Soil: "); Serial.println(soilmoisturepercent);
   Serial.print("Ldr: ");  Serial.println(adc1);
   Serial.print("Lux: ");  Serial.println(event.light);
+  Serial.print("Water: ");  Serial.println(adc2);
   Serial.print("SSID: "); Serial.println(ssid);
   Serial.print("ESP-MAC-Address: ");  Serial.println(WiFi.macAddress());  // muestro la mac
   Serial.print("FromIP: "); Serial.println(WiFi.localIP());               // muestro la IP que tiene mi arduino (IP de origen)
@@ -278,3 +280,5 @@ void MQTTcallback(char* mqtt_topic, byte* payload, unsigned int length) {     //
 void loop() {
   // como utilizo el deep-sleep no uso este loop
   }
+
+
