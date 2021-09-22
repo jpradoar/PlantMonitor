@@ -47,11 +47,17 @@ Finalmente quedo así:
 
 
 
+<br> 
+<div align="center"><h3> Anemómetro</h3> </div>
+
+[Anemómetro](https://en.wikipedia.org/wiki/Hall_effect)
+
+
 <br> <br> <br> 
 
 Quién esta detras de todo esto: 
 
-Jonathan (Jtan para los amigos).  Ciclista de toda la vida y entusiasta del software libre.
+Jonathan. Ciclista de toda la vida y entusiasta del software libre.
 He estado involucrado en el área de sistemas por más de diez años. Curioso, flexible, adaptable y muy creativo, amo "pensar fuera de la caja". Emprendedor por naturaleza y apasionado por la tecnología.
 <p align="center">
   <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/all.jpeg" width="30%" height="30%"  />
