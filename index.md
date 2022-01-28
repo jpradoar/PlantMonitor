@@ -33,8 +33,8 @@ Adicionalmente, el sistema consume información del Servicio Meteorológico Naci
 
 <div align="center"><h3> MVP (Minimo Producto Viable)</h3> </div>
 <p align="center">
- <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box0.jpeg" width="30%" height="30%" />
  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box2.jpeg" width="30%" height="30%" />
+ <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box0.jpeg" width="30%" height="30%" />
  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box3.jpeg" width="30%" height="30%" />
  <br>
  <img src="https://raw.githubusercontent.com/jpradoar/PlantMonitor/master/img/box1.jpeg" width="30%" height="30%" />
