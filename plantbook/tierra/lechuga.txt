@@ -1,0 +1,12 @@
+# Lechuga
+
+Distancia entre plantas: 		12 a 30cm
+Espacio ocupado: 			Poco
+Tolera sombra: 				Si
+Cultivo en maceta: 			Si
+Dificultad: 				Facil
+Siembra: 				Todo el año (depende variedad)
+Escalonar: 				15 dias
+Cosecha: 				Todo el año
+Dias de cosecha: 			60 a 90
+Duracion de semilla: 			4 años
