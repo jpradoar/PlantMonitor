@@ -113,7 +113,7 @@ void setup() {                  // START SETUP
 
 
 /*--------------------- MQTT CALBACK AND FUNCTIONS ----------------------------*/
-void MQTTcallback(char* mqtt_topic, byte* payload, unsigned int length) {     // Genero una funsion de callback
+void MQTTcallback(char* mqtt_topic, byte* payload, unsigned int length) {     // Genero una funcion de callback
   String message;                                                             // Seteo como string el mensaje
   for (int i = 0; i < length; i++) {                                          // Si el mensaje es igual a cero le sumo uno
     message = message + (char)payload[i];                                     //Convierto *bytes a Strings
@@ -185,7 +185,7 @@ void loop() {                          // START LOOP
   delay(2000);          // Espero 2 segundos para no estresar el server.
 }
 
-void handle_OnConnect() { // Funsion para generar el index del webserver
+void handle_OnConnect() { // Funcion para generar el index del webserver
   Temperature = dht.readTemperature(); // Gets the values of the temperature
   Humidity = dht.readHumidity(); // Gets the values of the humidity 
   server.send(200, "text/html", SendHTML(Temperature,Humidity)); 
